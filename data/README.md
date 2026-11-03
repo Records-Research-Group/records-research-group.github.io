@@ -3,6 +3,10 @@
 All files are derived exclusively from public sources and dedicated to
 the public domain under [CC0 1.0](../LICENSE).
 
+**Citable deposit:** doi:[10.5281/zenodo.23904505](https://doi.org/10.5281/zenodo.23904505)
+— the three `or_*` CSVs as a versioned, DOI'd dataset on Zenodo (CERN).
+Cite that DOI for stability; this directory is the working copy.
+
 ## `accessibility_scoreboard.csv`
 
 Per-request ledger for the Lane County records accessibility study:
