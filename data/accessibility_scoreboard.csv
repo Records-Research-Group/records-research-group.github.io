@@ -1,0 +1,22 @@
+ref,agency,portal_ticket,subject,filed,first_response,status_as_of_2026_11_02,fee_quoted_usd,fee_paid_usd,waiver_requested,waiver_outcome,notes
+RRG-01,Oregon DHS/OHA,,Vendor payments,2026-10-26,2026-10-26,Acknowledged - in review,,,n,n/a,Auto-acknowledged same day; review window in progress
+RRG-02,Oregon DHS/OHA,,Provider activation records,2026-10-26,2026-10-26,Acknowledged - in review,,,n,n/a,Auto-acknowledged same day; review window in progress
+RRG-03,Oregon DHS/OHA,,Vendor payments,2026-10-26,,In processing,,,n,n/a,
+RRG-04,Oregon DHS/OHA,,Contract documents,2026-10-26,2026-10-26,Acknowledged - in review,,,n,n/a,Auto-acknowledged same day; review window in progress
+RRG-05,Oregon DHS/OHA,,Investigation files,2026-10-26,2026-10-26,Acknowledged - in review,,,n,n/a,Auto-acknowledged same day; review window in progress
+RRG-06,Oregon DHS/OHA,,Contract documents,2026-10-26,,In processing,,,n,n/a,
+RRG-07,Oregon DHS/OHA,,Policy documents,2026-10-26,2026-10-26,Acknowledged - in review,,,n,n/a,Auto-acknowledged same day; review window in progress
+RRG-08,Oregon DHS/OHA,,Quarterly reports,2026-10-26,2026-10-26,Acknowledged - in review,,,n,n/a,Auto-acknowledged same day; review window in progress
+RRG-09,Oregon DHS/OHA,,Program statistics,2026-10-26,2026-10-26,Acknowledged - in review,,,n,n/a,Auto-acknowledged same day; review window in progress
+RRG-10,Lane County Clerk,26-974,Voter-roll maintenance statistics,2026-10-26,2026-10-26,Waiver denied - fee decision pending,728.89,0,y,denied 2026-11-02,"Denial cited requester's limited distribution capacity; narrowing to aggregate annual counts requested 11-02"
+RRG-11,Oregon DHS/OHA,,Program statistics,2026-10-26,,In processing,,,n,n/a,
+RRG-12,City of Eugene,PRR-2026-896,Check register / vendor payments,2026-10-26,2026-10-26,Estimate issued - waiver pending,277.20,0,y,pending,"Estimate 2026-11-02 (approx 5 hrs Finance staff @ $55.44); waiver/reduction request sent same day"
+RRG-13,City of Eugene,,Payroll,2026-10-26,2026-10-26,Acknowledged - in processing,,,n,n/a,
+RRG-14,City of Springfield,,Checkbook,2026-10-26,,In processing,,,n,n/a,
+RRG-15,City of Springfield,,Payroll,2026-10-26,,In processing,,,n,n/a,
+RRG-16,Lane County,26-968,Vendor disbursements / check register,2026-10-26,2026-10-29,Acknowledged - in processing,,,n,n/a,County confirmed scope (payments/disbursements to vendors) 10-29
+RRG-17,Lane County,26-971,Employee payroll (name title dept gross wages),2026-10-26,2026-10-26,Waiver denied - free list accepted,186.48,0,y,denied 2026-11-02,"Denial cited requester's limited distribution capacity; county's no-charge alternative (no wage fields) accepted 11-02; wage-inclusive estimate under evaluation within 60-day window"
+RRG-18,Oregon DHS/OHA,,Checkbook,2026-10-26,2026-10-26,Acknowledged - in review,,,n,n/a,Auto-acknowledged same day; review window in progress
+RRG-19,Oregon DHS/OHA,,Payroll,2026-10-26,2026-10-26,Acknowledged - in review,,,n,n/a,Auto-acknowledged same day; review window in progress
+RRG-20,Oregon Government Ethics Commission,,Program statistics,2026-10-26,2026-10-26,Acknowledged,,,n,n/a,Auto-acknowledged same day
+RRG-21,Lane County Clerk,26-975,Voter-registration record review (one deceased registrant),2026-10-26,2026-10-26,Estimate issued - waiver pending,92.22,0,y,pending,"Custodianship confirmed for records a-d; narrative questions declined; estimate 2026-10-30"
