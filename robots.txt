@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://records-research-group.github.io/sitemap.xml

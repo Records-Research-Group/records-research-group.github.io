@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+<channel>
+<title>Records Research Group</title>
+<link>https://records-research-group.github.io/</link>
+<description>Public-records accessibility research — Oregon administrative and financial records. Findings, derived datasets, and the request/response record itself, free at the point of access (CC0).</description>
+<language>en-us</language>
+<lastBuildDate>Mon, 02 Nov 2026 18:30:00 -0800</lastBuildDate>
+
+<item>
+<title>Lane County study update: two fee waivers denied; $1,284.59 quoted across four estimates</title>
+<link>https://records-research-group.github.io/notes/2026-10-lane-county-study.html</link>
+<guid>https://records-research-group.github.io/notes/2026-10-lane-county-study.html#2026-11-02</guid>
+<pubDate>Mon, 02 Nov 2026 18:30:00 -0800</pubDate>
+<description>Lane County denied fee waivers on requests #26-971 and #26-974, citing the requester's "plan and ability to distribute the information." Invoices: $186.48 (payroll), $728.89 (voter-roll statistics). City of Eugene issued a $277.20 estimate (PRR-2026-896). Waiver record: 0 granted, 2 denied, 2 pending.</description>
+</item>
+
+<item>
+<title>Public-records accessibility scoreboard published</title>
+<link>https://records-research-group.github.io/scoreboard.html</link>
+<guid>https://records-research-group.github.io/scoreboard.html</guid>
+<pubDate>Mon, 02 Nov 2026 18:30:00 -0800</pubDate>
+<description>Per-request ledger for the October 2026 request wave: 21 requests, 6 agencies — filed/acknowledged/produced, fees quoted vs paid, waiver outcomes. CSV available under data/.</description>
+</item>
+
+<item>
+<title>Per-request permanent pages live</title>
+<link>https://records-research-group.github.io/requests/</link>
+<guid>https://records-research-group.github.io/requests/</guid>
+<pubDate>Mon, 02 Nov 2026 18:30:00 -0800</pubDate>
+<description>Stable URLs for each portal-ticketed request: scope, correspondence timeline, fee calculations, current status.</description>
+</item>
+
+<item>
+<title>Lane County records accessibility study — research note posted</title>
+<link>https://records-research-group.github.io/notes/2026-10-lane-county-study.html</link>
+<guid>https://records-research-group.github.io/notes/2026-10-lane-county-study.html</guid>
+<pubDate>Fri, 30 Oct 2026 12:00:00 -0700</pubDate>
+<description>A systematic set of Oregon Public Records Law requests to Lane County and Oregon state agencies, measuring how much routine administrative and financial information is visible to the public — and what it costs to get what isn't.</description>
+</item>
+
+</channel>
+</rss>
