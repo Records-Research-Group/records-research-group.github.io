@@ -31,11 +31,11 @@ much the county spends managing the housing shortage after the fact.
 
 ## Findings
 
-- **Total, CY2023–2025: $46,955,415** across 16 program lines and
+- **Total, CY2023–2025: $46,955,415** across 15 program lines and
   5,745 payments.
 - **By year:** 2023 — $5.6M · 2024 — $22.1M · 2025 — $18.7M
-  (undated — $0.6M). The 2024 jump reflects Executive Order 23-02
-  shelter-capacity funding arriving in the register.
+  (undated — $0.6M). The 2024 jump is driven largely by Executive
+  Order 23-02 shelter-capacity funding peaking that year ($9.5M).
 - **Largest program lines:** Executive Order 23-02 — $14.5M;
   Continuum of Care — $8.1M; Prevention & Diversion — $6.8M;
   Statewide Shelter Program — $4.4M; Long-Term Rental Assistance —
