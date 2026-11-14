@@ -7,6 +7,18 @@ the public domain under [CC0 1.0](../LICENSE).
 — the three `or_*` CSVs as a versioned, DOI'd dataset on Zenodo (CERN).
 Cite that DOI for stability; this directory is the working copy.
 
+## `lane_county_housing_response_rollup.csv`
+
+Aggregate totals of Lane County voucher-register payments to
+homelessness-response and housing-assistance program lines,
+CY2023–2025: one row per program line × year (expenditure account
+code, program label, payment count, total dollars). Source: county
+voucher payment register produced under the Oregon Public Records
+Law; scope and caveats documented in the accompanying
+[research note](../notes/2026-11-lane-county-housing-response-spend.html).
+Aggregate published in place of the row-level register to limit
+republishing of individual payee names.
+
 ## `accessibility_scoreboard.csv`
 
 Per-request ledger for the Lane County records accessibility study:
