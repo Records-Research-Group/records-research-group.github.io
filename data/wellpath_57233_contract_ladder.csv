@@ -1,0 +1,9 @@
+instrument,effective_or_label,scope_note,increment_usd,cumulative_authority_usd
+base_contract,FY2023 executed,"3-year term; monthly installments Y1 $457874.25 / Y2 $471610.50 / Y3 $485758.83; CPI-U escalator capped 4%/yr; compensation increase triggers at jail population MADP > 350",5494491.00,5494491.00
+schedule_amend1,FY2023 schedule,"rate schedule / Amendment 1 staffing-matrix adjustment (Exhibit C/H, decrease)",-13924.00,5480567.00
+amendment_2,eff. 2023-07-01,"year-2 CPI + wage enhancement for existing positions",6041042.00,11521609.00
+amendment_3,FY2025,"new MAT program approx $296150.68/yr + Juvenile Services medical approx $862K/yr; inflation + staffing + litigation-insurance line approx $170K/yr",7426825.08,18948434.08
+amendment_4,Youth Services adj,"Youth Services adjustment (decrease)",-200149.00,18748285.08
+amendment_5,FY2026 renewal,"annual renewal",7592742.30,26341027.38
+amendment_6,"letter 2025-07-17; countersigned 2025-07-21","language adjustment only (no cost): Exhibit C title retitles (Charge RN to Director of Nursing; Administrative Assistant to Assistant Clinical Coordinator); carries Proposed Adult Staffing Matrix at 300 ADP / 27.90 FTE / 1116 hrs-wk; image-only scan, contents via OCR",0.00,26341027.38
+amendment_7,FY2027 renewal,"term extended to 2027-06-30; Adult Corrections + MAT $7077434.91 ($589786.24/mo) + Youth Services $705125.95 ($58760.50/mo); +2.5% CPI escalators",7782560.86,34123588.24

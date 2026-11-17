@@ -19,6 +19,20 @@ Law; scope and caveats documented in the accompanying
 Aggregate published in place of the row-level register to limit
 republishing of individual payee names.
 
+## `wellpath_57233_contract_ladder.csv`
+
+Per-instrument ladder for Lane County contract #57233 (Wellpath LLC —
+medical, dental, and mental-health services at the Lane County Adult
+Corrections facility): one row per executed instrument with its
+increment and cumulative contract authority as stated in the
+instrument itself, FY2023 base through Amendment 7 (term to
+June 30, 2027). Source: complete executed instrument file released by
+Lane County in two no-charge productions on public-records request
+#26-1042 (ORS 192.311 et seq.). Figures are contract authority
+(authorized ceiling), not payments made. Scope and caveats documented
+in the accompanying
+[research note](../notes/2026-11-wellpath-57233-contract.html).
+
 ## `accessibility_scoreboard.csv`
 
 Per-request ledger for the Lane County records accessibility study:
