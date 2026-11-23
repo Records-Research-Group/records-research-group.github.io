@@ -254,6 +254,28 @@ accessibility study</a>.</p>
 <tr><td>Bounced addresses (dead directory entries)</td><td class="num">{bounce_n}</td></tr>
 </table>
 
+<h2>How to read statuses</h2>
+<table class="stats">
+<tr><th>Status label</th><th>Meaning</th></tr>
+<tr><td>Produced / Completed</td><td>Records delivered (any format); resolved</td></tr>
+<tr><td>Fee estimate issued</td><td>Priced, unpaid — open while the pay-or-close clock runs</td></tr>
+<tr><td>Portal redirect / Channel-switch letter</td><td>Desk demands or steers to a portal channel; request posture preserved</td></tr>
+<tr><td>No responsive records (per desk)</td><td>Desk reports a null set — unfalsifiable from outside, logged as stated</td></tr>
+<tr><td>Nonresponse past ORS 192.324 ack window — logged</td><td>No acknowledgment inside the statutory window; logged 2026-11-20</td></tr>
+<tr><td>Nonresponse past ORS 192.324 ack window — DA/AG petition filed</td><td>As above, escalated under ORS 192.415</td></tr>
+<tr><td>petition to DA/AG filed</td><td>Petition for review filed on the thread's denial/fee/refusal</td></tr>
+<tr><td>Bounced / No response on file (delivery unverified)</td><td>Send failed or delivery cannot be confirmed — excluded from response-rate interpretations</td></tr>
+<tr><td>Sent — awaiting response / Acknowledged</td><td>In flight; inside or at the ack window</td></tr>
+<tr><td>Withdrawn / Drafted</td><td>Not in the corpus — superseded duplicates or unsent drafts</td></tr>
+</table>
+<p class="note">This table is a <b>dated snapshot</b> (as of {AS_OF_HUMAN});
+statuses change as correspondence arrives — pending, missing, denied,
+and resolved rows are labeled separately above. Errors reported to the
+<a href="about.html">corrections address</a> get a dated fix; bodies
+named in findings may submit a response for verbatim, dated appending
+(see <a href="findings/index.html#subject-response-rights">subject
+response rights</a>).</p>
+
 <h2>Per-request ledger</h2>
 <table>
 <tr><th>Ref</th><th>Agency</th><th>Ticket</th><th>Subject</th><th>Filed</th><th>First response</th><th>Status</th><th>Fee quoted</th><th>Waiver</th></tr>

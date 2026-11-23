@@ -104,52 +104,84 @@ correction path.</dd>
 </section>
 
 <section class="f" id="f2">
-<h2>F2 — Person-payee exclusion from published feeds</h2>
+<h2>F2 — Person-payee exclusion from the state transparency portal</h2>
 <dl>
 <dt>Claim</dt>
-<dd>At least one agency's published payment data systematically omits
-payments to person payees while retaining vendor payees — the class of
-payee determines whether a payment is publicly legible.</dd>
+<dd>Payments made by Oregon agencies to named individual persons do not
+appear on the state transparency portal — across at least two agencies
+and multiple payment instruments — while reimbursements to the same
+agencies' own employees do appear.</dd>
 <dt>Stated obligation</dt>
 <dd>No statute requires the proactive feed; the finding bears on whether
 the published layer can substitute for the requested records.</dd>
 <dt>Observed behavior</dt>
-<dd>Springfield's published payment data contains vendor payments but
-no person-payee rows, while the ledger confirms person payees are paid
-through the same system.</dd>
+<dd>In OWRD's produced FY2025 detail, 208 payees totaling ~$1.08M —
+water-program grant and award payments to named individuals — have no
+portal presence in any year. In DSL's FY2025 detail, 16 payees totaling
+$205,619 — sole-proprietor contractors — are likewise absent. A third
+produced agency (OSBGE) has no portal presence at all; a fourth
+(DOGAMI) shows a different gap shape — purchase-order obligations
+rather than payments — and does not replicate the pattern.</dd>
 <dt>Witnesses</dt>
-<dd>RRG-14 / RRG-15 (Springfield) in the
-<a href="../scoreboard.html">scoreboard</a>.</dd>
+<dd><a href="../scoreboard.html#rrg-64">RRG-64</a> (OWRD, 14,264 rows)
+and <a href="../scoreboard.html#rrg-66">RRG-66</a> (DSL), each diffed
+against Socrata API queries of the portal's vendor universe, all years
+— re-runnable by diffing payee name sets between production and
+portal. OSBGE/DOGAMI:
+<a href="../scoreboard.html#rrg-122">RRG-122</a>,
+<a href="../scoreboard.html#rrg-78">RRG-78</a>.</dd>
 <dt>What this does not establish</dt>
-<dd>The mechanism — exclusion may be a privacy rule, a feed-spec choice,
-or an export artifact. Pending the feed specification we cannot say
-which.</dd>
+<dd>That individuals are deliberately suppressed for privacy —
+employee names paid as vendors do publish. The measured pattern is
+consistent with an instrument-class or filer-status scope decision in
+the portal feed; the precise mechanism is knowable only from the feed
+specification, which is itself a public record.</dd>
 <dt>Status</dt>
-<dd>Documented; mechanism open pending feed spec.</dd>
+<dd>Documented; mechanism open pending the feed specification.</dd>
 </dl>
 </section>
 
 <section class="f" id="f3">
-<h2>F3 — Portal↔ledger divergence ($1.32M)</h2>
+<h2>F3 — Portal and ledger diverge by $1.32M (FY2025, OWRD)</h2>
 <dl>
 <dt>Claim</dt>
-<dd>A published transparency total and the agency's own disbursement
-ledger for the same period diverged by approximately $1.32M —
-decomposable to specific missing record classes.</dd>
+<dd>For OWRD FY2025, the transparency portal reports
+<b>$32,666,271.83</b> while the agency's own produced vendor-payments
+export totals <b>$33,982,830.31</b> — a $1,316,558.48 divergence that
+decomposes exactly into three measured components.</dd>
 <dt>Stated obligation</dt>
-<dd>Same as F2 — no proactive-feed duty, but the divergence means the
-published figure cannot stand in for the underlying records.</dd>
-<dt>Observed behavior</dt>
-<dd>The divergence was decomposed into missing classes rather than left
-as an unexplained delta; it is not attributable to rounding or
-coverage-window effects.</dd>
+<dd>No statute requires the proactive feed; the finding bears on whether
+the published layer can substitute for the requested records.</dd>
+<dt>What was compared, and what explains it</dt>
+<dd>Portal total for OWRD, fiscal year ended 2025-06-30, vs. the
+payment-level export OWRD produced under ORS 192 for the same period.
+The divergence resolves as:
+<ul>
+<li><b>+$5.29M portal-side only:</b> 22 payees appearing on the portal
+but not in the export — all other state agencies (DAS $2.72M, DOJ
+$2.09M, etc.). Inter-agency transfers are counted as expenditure on
+the portal but excluded from a vendor-payments export.</li>
+<li><b>+$4.12M production-side only:</b> 246 payees in the export but
+absent from the portal — fiscal-boundary obligations tagged FY2025 by
+appropriation year but dated July 2025+ by transaction date (the
+portal books by transaction date), plus the F2 person-payee class.</li>
+<li><b>+$2.49M same-vendor year disagreement:</b> 131 shared vendors
+where both sides report the vendor but assign the same payments to
+different fiscal years.</li>
+</ul>
+The competing explanation is real and is itself the finding: the two
+totals measure spending under different definitions (all disbursements
+vs. external vendor payments; appropriation-year vs. transaction-date
+bucketing). Neither total is "wrong."</dd>
 <dt>Witnesses</dt>
-<dd>Lane County disbursement thread,
-<a href="../scoreboard.html#rrg-16">RRG-16</a>.</dd>
+<dd><a href="../scoreboard.html#rrg-64">RRG-64</a> (OWRD production)
+vs. portal API aggregates; a per-vendor difference table is maintained
+in the study ledger.</dd>
 <dt>What this does not establish</dt>
-<dd>That the portal figure is wrong — only that it and the ledger cannot
-both be complete for the same scope. Which side omits what is documented
-at the record-class level.</dd>
+<dd>That either figure is incorrect — the finding is that the two
+public surfaces are not reconcilable by a member of the public without
+the detailed export, which is what a records request is for — and
+which the F1-style portal referral would leave undone.</dd>
 <dt>Status</dt>
 <dd>Documented.</dd>
 </dl>
@@ -384,15 +416,57 @@ to leave no custodian.</dd>
 </dl>
 </section>
 
+<h2>Scope, selection &amp; comparability</h2>
+<p><b>How bodies were selected.</b> Wave 1 (2026-10-26) was a Lane County
+pilot — county offices, Eugene, Springfield, and state-local desks,
+chosen for proximity and subject relevance; its asks differed per agency
+by design. Wave 2 (2026-11-04/05) enumerated Oregon state bodies from
+the Secretary of State's Blue Book <em>State Agencies, Boards and
+Commissions</em> list plus the Governor's Board Book: 143 entries after
+folding subunits to parents, including zero-budget boards ("no
+disbursements" is itself a response class); excluded: judiciary,
+legislative bodies, and staff-less advisory task forces. Wave 3 filed a
+FOIA variant at 25 federal bodies with Oregon presence (judiciary,
+congressional offices, USPS, and DOD-no-installation excluded).</p>
+<p><b>What is comparable.</b> Wave-2 and wave-3 rows carry one canonical
+ask — payment-level vendor records, FY2024 + FY2025 + FYTD, fee waiver
+cited — so their outcomes are directly comparable: same request, same
+statute family, different desks. Wave-1 rows are heterogeneous asks and
+should not be pooled with the canonical rows when comparing outcomes;
+fee and response figures from wave 1 are illustrative of their own
+threads, not controls. <b>Federal rows run under FOIA</b> (5 U.S.C.
+§552, 20-business-day determination, federal FY ending September 30) —
+a different statute and clock; they are published in the same ledger
+but are not part of the ORS rates.</p>
+<p><b>What the rates mean.</b> Figures like "53 of 163 unacknowledged"
+describe <em>this corpus</em> — one requester, identical asks, a
+defined denominator — not the rate at which all requesters or all
+requests are ignored. The instrument measures desk behavior under an
+email-channel requester posture; portal-first requesters may see
+different treatment, and a share of nonresponses will trace to address
+rot, spam filtering, or staffing rather than posture. Where a finding
+covers a small number of bodies (F1: three verified; F2: two
+replicating, one counter-example) the count is stated with it.</p>
+
+<h2 id="subject-response-rights">Subject response rights</h2>
+<p>Every body named in a finding was contacted on the underlying request
+thread — several findings document the reply itself changing the
+outcome (a produced export after a documented rebuttal; a same-day
+answer that resolved a document-set question). Beyond that record:
+any body named in a finding may submit a response at any time via the
+contact address below; substantive responses are appended to the
+finding verbatim and dated. Factual corrections receive the dated
+treatment described on the <a href="../about.html">about page</a>.</p>
+
 <h2>Method note</h2>
-<p>Wave 1 (2026-10-26) targeted Lane County bodies; wave 2 (2026-11-04/05)
-sent one canonical vendor-payments ask to ~130 Oregon state bodies; wave 3
-filed the FOIA variant at federal desks. Every datum above is traceable to
-the published <a href="../scoreboard.html">request ledger</a> or a
-per-request page; correspondence metadata (dates, quoted text) is
-maintained in the internal evidence archive and summarized on the request
-pages. Internal findings not yet meeting the verification bar are withheld
-from this page rather than published in softened form.</p>
+<p>Every datum above is traceable to the published
+<a href="../scoreboard.html">request ledger</a> or a per-request page;
+correspondence metadata (dates, quoted text) is maintained in the
+internal evidence archive and summarized on the request pages.
+Statuses are a dated snapshot — the ledger shows each row's state as
+of 2026-11-23 and updates as correspondence arrives. Internal findings
+not yet meeting the verification bar are withheld from this page
+rather than published in softened form.</p>
 
 <p class="note">Corrections policy: factual errors receive a dated
 correction line on the affected page and a note in the feed. Contact via
