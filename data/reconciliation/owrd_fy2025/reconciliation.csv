@@ -1,8 +1,8 @@
-component,n_rows_or_payees,signed_amount_usd,basis
-production_fy2025_total,6965,33982830.31,agency production rows tagged Fiscal Year=2025 (appropriation year)
-portal_fy2025_total,622,32666271.83,data.oregon.gov y9g9-xsxs agency=690 fiscal_year=2025
-gap_production_minus_portal,,1316558.48,production_total - portal_total
-component_prod_only_payees,246,4122981.67,payees in production extract absent from portal extract
-component_portal_only_payees,22,-5293327.98,payees in portal extract absent from production extract (inter-agency transfers)
-component_shared_vendor_net_delta,374,2486904.79,production - portal summed over vendors present in both (131 of 374 have nonzero delta)
-component_sum_equals_gap,,1316558.48,4122981.67 - 5293327.98 + 2486904.79
+component,n,count_unit,signed_amount_usd,basis
+production_fy2025_total,6965,source_row,33982830.31,agency production rows tagged Fiscal Year=2025 (appropriation year)
+portal_fy2025_total,622,source_row,32666271.83,data.oregon.gov y9g9-xsxs agency=690 fiscal_year=2025
+gap_production_minus_portal,,,1316558.48,production_total - portal_total
+component_prod_only_payees,246,payee_key,4122981.67,payees in production extract absent from portal extract
+component_portal_only_payees,22,payee_key,-5293327.98,payees in portal extract absent from production extract (inter-agency transfers)
+component_shared_vendor_net_delta,374,payee_key,2486904.79,production - portal summed over vendors present in both (131 of 374 have nonzero delta)
+component_sum_equals_gap,,,1316558.48,4122981.67 - 5293327.98 + 2486904.79
