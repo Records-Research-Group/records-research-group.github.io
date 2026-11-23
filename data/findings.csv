@@ -1,7 +1,7 @@
 finding,title,bodies,status,witnesses
 F1,Transparency-dead-zone deflection,2 verified + 1 ledger-logged,Documented,"RRG-30; RRG-96; RRG-35 (ledger-logged)"
-F2,Person-payee exclusion from state transparency portal,2 comparisons + variants,Reported — mechanism open; diff dataset unpublished,"RRG-64; RRG-66; RRG-122; RRG-78"
-F3,Portal-ledger divergence ($1.32M OWRD FY2025),1 verified,Documented — arithmetic verified; component assignments researcher-reported,"RRG-64 vs portal API aggregates"
+F2,Person-payee exclusion from state transparency portal,2 comparisons + variants,Documented at OWRD + DSL; cross-agency pattern reported; diff datasets published at data/reconciliation/owrd_fy2025/,"RRG-64; RRG-66; RRG-122; RRG-78"
+F3,Portal-ledger divergence ($1.32M OWRD FY2025),1 verified,Verified — inputs and payee-level decomposition published at data/reconciliation/owrd_fy2025/,"RRG-64 vs portal API aggregates"
 F4,Desk-level fee treatment incl. narrowing-immune estimates,8+,Documented,"RRG-10; RRG-21; RRG-94; RRG-76; RRG-66; RRG-64; RRG-17"
 F5,Email channel accepted in law refused at desks,4 refusals + relay variants,Documented,"RRG-93; RRG-49; RRG-71; RRG-152; PRR-2026-926"
 F6,Delivery mechanics as friction,1 primary + supporting,Documented (weakest),"RRG-13; RRG-49"

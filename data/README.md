@@ -90,3 +90,13 @@ Internally derived screening columns — `fraud_risk_score`,
 they are unvalidated heuristics, not findings of fact. Columns named
 `match_tier` / `match_conf` / `match_note` document how entity
 resolution was performed and are retained as join provenance.
+
+## `reconciliation/owrd_fy2025/`
+
+Reproduction materials for findings F2/F3 — OWRD FY2025 portal vs.
+production reconciliation: the agency extract (6,965 FY-tagged rows),
+a dated portal pull (data.oregon.gov `y9g9-xsxs`, agency 690,
+2026-11-23), deterministic matching rules, signed component totals
+reconciling to $1,316,558.48 exactly, both unmatched-payee lists, the
+per-vendor delta table, and the F2 person-payee lists for OWRD and
+DSL. See [reconciliation/owrd_fy2025/README.md](reconciliation/owrd_fy2025/README.md).

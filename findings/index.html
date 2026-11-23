@@ -56,8 +56,8 @@ index: <a href="../data/findings.csv">findings.csv</a>.</p>
 <table>
 <tr><th>#</th><th>Finding</th><th>Bodies</th><th>Status</th></tr>
 <tr><td>F1</td><td><a href="#f1">Transparency-dead-zone deflection</a></td><td>2 verified + 1 logged</td><td>Documented</td></tr>
-<tr><td>F2</td><td><a href="#f2">Person-payee exclusion from state transparency portal</a></td><td>2 comparisons + variants</td><td>Reported — mechanism open</td></tr>
-<tr><td>F3</td><td><a href="#f3">Portal↔ledger divergence ($1.32M)</a></td><td>1</td><td>Arithmetic verified; components researcher-reported</td></tr>
+<tr><td>F2</td><td><a href="#f2">Person-payee exclusion from state transparency portal</a></td><td>2 comparisons + variants</td><td>Documented at OWRD + DSL; pattern reported</td></tr>
+<tr><td>F3</td><td><a href="#f3">Portal↔ledger divergence ($1.32M)</a></td><td>1</td><td>Verified — inputs + decomposition published</td></tr>
 <tr><td>F4</td><td><a href="#f4">Desk-level fee treatment, incl. narrowing-immunity</a></td><td>8+</td><td>Documented</td></tr>
 <tr><td>F5</td><td><a href="#f5">Email channel accepted in law, refused at desks</a></td><td>4 refusals + relay variants</td><td>Documented</td></tr>
 <tr><td>F6</td><td><a href="#f6">Delivery mechanics as friction</a></td><td>1 primary + supporting</td><td>Documented (weakest)</td></tr>
@@ -109,21 +109,25 @@ correction path.</dd>
 <h2>F2 — Person-payee exclusion from the state transparency portal</h2>
 <dl>
 <dt>Claim</dt>
-<dd>Reported: payee-level exports produced by two Oregon agencies contain
-payments to named individual persons that do not appear on the state
+<dd>Payee-level exports produced by two Oregon agencies contain payments
+to named individual persons that do not appear on the state
 transparency portal, while reimbursements to the same agencies' own
-employees do appear. The underlying diff dataset is not yet published.</dd>
+employees do appear. Diff datasets and matching rules are published at
+<a href="../data/reconciliation/owrd_fy2025/README.md">data/reconciliation/owrd_fy2025/</a>.</dd>
 <dt>Stated obligation</dt>
 <dd>No statute requires the proactive feed; the finding bears on whether
 the published layer can substitute for the requested records.</dd>
 <dt>Observed behavior</dt>
-<dd>In OWRD's produced FY2025 detail, 208 payees totaling ~$1.08M —
-water-program grant and award payments to named individuals — have no
-portal presence in any year. In DSL's FY2025 detail, 16 payees totaling
-$205,619 — sole-proprietor contractors — are likewise absent. A third
-produced agency (OSBGE) has no portal presence at all; a fourth
-(DOGAMI) shows a different gap shape — purchase-order obligations
-rather than payments — and does not replicate the pattern.</dd>
+<dd>In OWRD's produced FY2025 detail, 44 payees totaling $1,120,783.20 —
+water-program grant and award payments to named individuals (filter:
+obj 6801/6725, fund 4330; 131 payees / $3,489,700.86 across all
+production years) — have no portal presence under the published
+matching rule. In DSL's produced detail, 17 production-only payees
+totaling $100,018.43 — mostly named individuals and sole-proprietor
+contractors — are absent under the stated window. A third produced
+agency (OSBGE) has no portal presence at all; a fourth (DOGAMI) shows
+a different gap shape — purchase-order obligations rather than
+payments — and does not replicate the pattern.</dd>
 <dt>Witnesses</dt>
 <dd><a href="../scoreboard.html#rrg-64">RRG-64</a> (OWRD, 14,264 rows)
 and <a href="../scoreboard.html#rrg-66">RRG-66</a> (DSL), each diffed
@@ -139,10 +143,11 @@ consistent with an instrument-class or filer-status scope decision in
 the portal feed; the precise mechanism is knowable only from the feed
 specification, which is itself a public record.</dd>
 <dt>Status</dt>
-<dd>Reported — matching used exact payee-name set difference against the
-portal's Socrata API vendor universe; alternate-name handling is
-documented in the study ledger. Mechanism open pending the feed
-specification; the diff dataset is in preparation for publication.</dd>
+<dd>Documented at OWRD + DSL — normalized payee lists, portal extracts,
+matching rules, and prior-figure caveats published at
+<a href="../data/reconciliation/owrd_fy2025/README.md">data/reconciliation/owrd_fy2025/</a>.
+Broader cross-agency pattern remains reported (OSBGE absent; DOGAMI
+different shape). Mechanism open pending the feed specification.</dd>
 </dl>
 </section>
 
@@ -170,30 +175,34 @@ export.</li>
 <li><b>+$4.12M production-side only:</b> 246 payees in the export but
 absent from the portal — reported as fiscal-boundary obligations and
 the F2 person-payee class.</li>
-<li><b>+$2.49M same-vendor year disagreement:</b> 131 shared vendors
-where the two surfaces report different FY2025 totals — consistent
-with appropriation-year vs. transaction-date bucketing, not yet
-verified at transaction level.</li>
+<li><b>+$2.49M same-vendor year disagreement:</b> 131 of 374 matched
+vendors carry a nonzero FY2025 delta — consistent with
+appropriation-year vs. transaction-date bucketing; 597 production
+rows tagged FY25 are dated after 2025-06-30 ($6,682,744.24).</li>
 </ul>
-Differences in coverage and fiscal-year treatment are competing
-explanations consistent with the observed totals; their contribution
-has not yet been verified at transaction level. The discrepancy alone
-does not establish that either total is wrong.</dd>
+The components reconcile to the cent at payee level and are published
+with inputs at
+<a href="../data/reconciliation/owrd_fy2025/README.md">data/reconciliation/owrd_fy2025/</a>.
+Sub-payee convention differences are not resolved — the portal
+publishes only vendor×class×FY aggregates. The discrepancy alone does
+not establish that either total is wrong.</dd>
 <dt>Witnesses</dt>
 <dd><a href="../scoreboard.html#rrg-64">RRG-64</a> (OWRD production)
-vs. portal API aggregates. Verification limitation: the source totals
-are reproduced (the two aggregate figures and the rounded components),
-but the per-vendor difference table and input extracts are maintained
-in the study ledger and not yet published — component assignments and
-the fiscal-year explanations are researcher-reported.</dd>
+vs. portal API aggregates. Inputs and the per-payee difference table
+are published at
+<a href="../data/reconciliation/owrd_fy2025/README.md">data/reconciliation/owrd_fy2025/</a>:
+agency extract (FY25-tagged rows), dated portal pull (2026-11-23),
+matching rules, signed components, and both unmatched lists.
 <dt>What this does not establish</dt>
 <dd>That either figure is incorrect — the finding is that the two
 public surfaces are not reconcilable by a member of the public without
 the detailed export, which is what a records request is for — and
 which the F1-style portal referral would leave undone.</dd>
 <dt>Status</dt>
-<dd>Arithmetic verified; component assignments researcher-reported
-pending publication of the reconciliation inputs.</dd>
+<dd>Verified — inputs and payee-level decomposition published at
+<a href="../data/reconciliation/owrd_fy2025/README.md">data/reconciliation/owrd_fy2025/</a>;
+components reconcile to $1,316,558.48 exactly. Sub-payee differences
+not resolved (portal publishes vendor×class×FY aggregates only).</dd>
 </dl>
 </section>
 
