@@ -379,8 +379,12 @@ petitions: L7-DPSST at the AG and L7-975 at the Lane DA): channel
 refusals (L1, L5, L6, L7-DPSST), constructive denial via
 narrowing-immune fees (L3, L7-975), a fee-waiver denial (L4), a batch
 of categorical nonresponses (L8–L17), and the sheriff request (L18).
-Filing dates are ledger-logged from send records; transmission
-receipts and any orders are the authoritative evidence. The earliest
+Each filing's transmission is documented in the published
+<a href="../data/petition_transmissions.csv">petition_transmissions.csv</a>:
+send timestamp, recipient address (Lane DA / DOJ petition mailbox),
+and request-body SHA-256 for all 19 filings plus 2 supplements, drawn
+from the send audit log. Any resulting acknowledgments or orders are
+the authoritative evidence for what happened next. The earliest
 petitions' statutory 7-day order clocks have lapsed; as of 2026-11-23
 no order has been received on any petition — a narrower observation
 than "the oversight layer did nothing."</dd>
@@ -398,8 +402,10 @@ count and the elapsed clocks: nearly half the identical canonical asks
 past the acknowledgment window, and zero orders received on petitions
 whose statutory clocks have run.</dd>
 <dt>Status</dt>
-<dd>Documented; order clocks remain open. Each lapsed clock is itself
-a scorecard datum.</dd>
+<dd>Documented; filings transmission-evidenced via
+<a href="../data/petition_transmissions.csv">petition_transmissions.csv</a>;
+order clocks remain open. Each lapsed clock is itself a scorecard
+datum.</dd>
 </dl>
 </section>
 

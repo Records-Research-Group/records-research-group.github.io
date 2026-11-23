@@ -100,3 +100,12 @@ a dated portal pull (data.oregon.gov `y9g9-xsxs`, agency 690,
 reconciling to $1,316,558.48 exactly, both unmatched-payee lists, the
 per-vendor delta table, and the F2 person-payee lists for OWRD and
 DSL. See [reconciliation/owrd_fy2025/README.md](reconciliation/owrd_fy2025/README.md).
+
+## `petition_transmissions.csv`
+
+Send-audit transmission log for the 19 petition filings (18 identifiers
+L1–L18; L7 = two distinct petitions) plus 2 supplements: send timestamp,
+recipient address (Lane County DA / Oregon DOJ petition mailbox), and
+request-body SHA-256 per filing. Source: `records_send_audit.jsonl`
+`reply_send` events. The `order_received` column is a dated status
+snapshot (none as of 2026-11-23), not a claim that none will arrive.

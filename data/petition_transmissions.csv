@@ -1,0 +1,22 @@
+ticket,petition_id,venue,recipient,sent_at,approved_at,kind,body_sha256,order_received_as_of_2026_11_23
+petition_L2_springfield_da,L2,Lane County District Attorney,LCDAMAIL@lanecountyor.gov,2026-11-04T22:35:01,2026-11-04T22:34:59,filing,af8f15f8906bf3fe…,none
+petition_L3_26974_da,L3,Lane County District Attorney,LCDAMAIL@lanecountyor.gov,2026-11-04T22:35:03,2026-11-04T22:35:01,filing,b29651ea7707d094…,none
+petition_L1_odhs_ag,L1,Oregon DOJ / Attorney General,PublicRecordsOrder@doj.oregon.gov,2026-11-04T23:03:46,2026-11-04T23:03:45,filing,d44d72d124a71449…,none
+petition_L4_26971_da,L4,Lane County District Attorney,LCDAMAIL@lanecountyor.gov,2026-11-09T12:22:52,2026-11-09T12:22:50,filing,97c72dd53b3bfa68…,none
+petition_L5_doc_ag,L5,Oregon DOJ / Attorney General,PublicRecordsOrder@doj.oregon.gov,2026-11-09T12:22:54,2026-11-09T12:22:52,filing,54bd650c5ff18095…,none
+petition_L6_oprd_ag,L6,Oregon DOJ / Attorney General,PublicRecordsOrder@doj.oregon.gov,2026-11-09T12:22:56,2026-11-09T12:22:55,filing,7e38641923e89334…,none
+petition_L7_dpsst_ag,L7,Oregon DOJ / Attorney General,PublicRecordsOrder@doj.oregon.gov,2026-11-09T19:58:27,,filing,b95c0e8c4abc8ce5…,none
+petition_L7_26975_da,L7,Lane County District Attorney,LCDAMAIL@lanecountyor.gov,2026-11-12T20:06:41,2026-11-12T20:06:29,filing,2b9a8c325ba209a0…,none
+petition_L3_supplement_da,L3,Lane County District Attorney,LCDAMAIL@lanecountyor.gov,2026-11-13T14:18:18,2026-11-13T14:18:16,supplement,e8c68470130db812…,none
+petition_L7_26975_supplement_da,L7,Lane County District Attorney,LCDAMAIL@lanecountyor.gov,2026-11-19T12:03:42,2026-11-19T12:03:35,supplement,d6647fcce7b3d714…,none
+petition_L8_ode_ag,L8,Oregon DOJ / Attorney General,PublicRecordsOrder@doj.oregon.gov,2026-11-20T09:36:03,2026-11-20T09:35:53,filing,89423674315e4509…,none
+petition_L9_dor_ag,L9,Oregon DOJ / Attorney General,PublicRecordsOrder@doj.oregon.gov,2026-11-20T09:36:04,2026-11-20T09:35:54,filing,df4ca8aca361d6aa…,none
+petition_L10_forestry_ag,L10,Oregon DOJ / Attorney General,PublicRecordsOrder@doj.oregon.gov,2026-11-20T09:36:06,2026-11-20T09:35:54,filing,e56e8c08e79dcd87…,none
+petition_L11_odfw_ag,L11,Oregon DOJ / Attorney General,PublicRecordsOrder@doj.oregon.gov,2026-11-20T09:36:07,2026-11-20T09:35:54,filing,1983ca6c18885021…,none
+petition_L12_dcbs_ag,L12,Oregon DOJ / Attorney General,PublicRecordsOrder@doj.oregon.gov,2026-11-20T09:36:09,2026-11-20T09:35:54,filing,1df4ec13e33a33ea…,none
+petition_L13_oda_ag,L13,Oregon DOJ / Attorney General,PublicRecordsOrder@doj.oregon.gov,2026-11-20T09:36:10,2026-11-20T09:35:54,filing,4b850911a98a1e05…,none
+petition_L14_boli_ag,L14,Oregon DOJ / Attorney General,PublicRecordsOrder@doj.oregon.gov,2026-11-20T09:36:12,2026-11-20T09:35:54,filing,f4e9465207c0d8e1…,none
+petition_L15_oem_ag,L15,Oregon DOJ / Attorney General,PublicRecordsOrder@doj.oregon.gov,2026-11-20T09:36:13,2026-11-20T09:35:54,filing,04c27ec3352c9e94…,none
+petition_L16_bcd_ag,L16,Oregon DOJ / Attorney General,PublicRecordsOrder@doj.oregon.gov,2026-11-20T09:36:15,2026-11-20T09:35:55,filing,11baa7dc43273f8a…,none
+petition_L17_biz_ag,L17,Oregon DOJ / Attorney General,PublicRecordsOrder@doj.oregon.gov,2026-11-20T09:36:16,2026-11-20T09:35:55,filing,557ef2fed2385fb8…,none
+petition_L18_sheriff_da,L18,Lane County District Attorney,LCDAMAIL@lanecountyor.gov,2026-11-20T09:36:17,2026-11-20T09:35:55,filing,5b056a7ef7f82da4…,none
