@@ -55,13 +55,13 @@ index: <a href="../data/findings.csv">findings.csv</a>.</p>
 <h2>Index</h2>
 <table>
 <tr><th>#</th><th>Finding</th><th>Bodies</th><th>Status</th></tr>
-<tr><td>F1</td><td><a href="#f1">Transparency-dead-zone deflection</a></td><td>3 verified</td><td>Documented</td></tr>
-<tr><td>F2</td><td><a href="#f2">Person-payee exclusion from state transparency portal</a></td><td>2 verified + variants</td><td>Documented — mechanism open</td></tr>
+<tr><td>F1</td><td><a href="#f1">Transparency-dead-zone deflection</a></td><td>2 verified + 1 logged</td><td>Documented</td></tr>
+<tr><td>F2</td><td><a href="#f2">Person-payee exclusion from state transparency portal</a></td><td>2 comparisons + variants</td><td>Reported — mechanism open</td></tr>
 <tr><td>F3</td><td><a href="#f3">Portal↔ledger divergence ($1.32M)</a></td><td>1 verified</td><td>Documented</td></tr>
 <tr><td>F4</td><td><a href="#f4">Desk-level fee treatment, incl. narrowing-immunity</a></td><td>8+</td><td>Documented</td></tr>
-<tr><td>F5</td><td><a href="#f5">Email channel accepted in law, refused at desks</a></td><td>5</td><td>Documented</td></tr>
-<tr><td>F6</td><td><a href="#f6">Delivery mechanics as friction</a></td><td>3</td><td>Documented (weakest)</td></tr>
-<tr><td>F7</td><td><a href="#f7">Mass nonresponse; petition layer silent</a></td><td>53 nonresponders; 18 petitions</td><td>Documented; clocks open</td></tr>
+<tr><td>F5</td><td><a href="#f5">Email channel accepted in law, refused at desks</a></td><td>4 refusals + relay variants</td><td>Documented</td></tr>
+<tr><td>F6</td><td><a href="#f6">Delivery mechanics as friction</a></td><td>1 primary + supporting</td><td>Documented (weakest)</td></tr>
+<tr><td>F7</td><td><a href="#f7">Mass nonresponse; petition layer silent</a></td><td>50 labeled; 18 petitions</td><td>Documented; clocks open</td></tr>
 <tr><td>F8</td><td><a href="#f8">Custodianship seams — responsibility vacuum</a></td><td>3-desk vacuum + rollup pattern</td><td>Documented</td></tr>
 </table>
 
@@ -70,16 +70,17 @@ index: <a href="../data/findings.csv">findings.csv</a>.</p>
 <dl>
 <dt>Claim</dt>
 <dd>When asked for payment-level records, desks point requesters at the
-state transparency portal knowing — or without checking — that the
-portal does not carry the requested record class.</dd>
+state transparency portal, which does not carry the requested record
+class — making the referral verifiably non-responsive to the ask.</dd>
 <dt>Stated obligation</dt>
 <dd>ORS 192.324: the custodian must respond to the request as made; a
 referral to a public dataset satisfies it only if the dataset actually
 contains the records.</dd>
 <dt>Observed behavior</dt>
-<dd>At least three desks (OWEB, the Chiropractic Examiners board, DEQ)
-responded to the identical vendor-payments ask by pointing to the
-Oregon Transparency "State Agency expenditures" dataset. We verified
+<dd>Two desks (OWEB, the Chiropractic Examiners board) are documented in
+quoted correspondence pointing a payment-level ask to the Oregon
+Transparency "State Agency expenditures" dataset; a third (DEQ) is
+ledger-logged without reproduced correspondence. We verified
 that dataset (data.oregon.gov y9g9-xsxs): vendor × expenditure-class ×
 fiscal-year aggregates only, FY2019–FY2025 — no payment-level rows, no
 transaction dates, no document numbers, no current-year data. When the
@@ -93,10 +94,11 @@ gap was sent back to the Chiropractic Examiners board in writing
 production is in the ledger at RRG-30.</dd>
 <dt>What this does not establish</dt>
 <dd>Whether the redirect is policy, script, or individual habit; whether
-the desks knew the dataset's coverage limits. It establishes only that
-the referral was verifiably empty — and that the real export existed
-and could be produced within days once the referral was shown to be
-empty.</dd>
+the desks knew the dataset's coverage limits; a mistaken good-faith
+referral remains possible. It establishes only that the referral was
+verifiably non-equivalent to the ask — and that the real export
+existed and could be produced within days once the mismatch was
+explained.</dd>
 <dt>Status</dt>
 <dd>Documented; production after documented rebuttal is the observed
 correction path.</dd>
@@ -107,10 +109,10 @@ correction path.</dd>
 <h2>F2 — Person-payee exclusion from the state transparency portal</h2>
 <dl>
 <dt>Claim</dt>
-<dd>Payments made by Oregon agencies to named individual persons do not
-appear on the state transparency portal — across at least two agencies
-and multiple payment instruments — while reimbursements to the same
-agencies' own employees do appear.</dd>
+<dd>Reported: payee-level exports produced by two Oregon agencies contain
+payments to named individual persons that do not appear on the state
+transparency portal, while reimbursements to the same agencies' own
+employees do appear. The underlying diff dataset is not yet published.</dd>
 <dt>Stated obligation</dt>
 <dd>No statute requires the proactive feed; the finding bears on whether
 the published layer can substitute for the requested records.</dd>
@@ -137,7 +139,10 @@ consistent with an instrument-class or filer-status scope decision in
 the portal feed; the precise mechanism is knowable only from the feed
 specification, which is itself a public record.</dd>
 <dt>Status</dt>
-<dd>Documented; mechanism open pending the feed specification.</dd>
+<dd>Reported — matching used exact payee-name set difference against the
+portal's Socrata API vendor universe; alternate-name handling is
+documented in the study ledger. Mechanism open pending the feed
+specification; the diff dataset is in preparation for publication.</dd>
 </dl>
 </section>
 
@@ -148,7 +153,7 @@ specification, which is itself a public record.</dd>
 <dd>For OWRD FY2025, the transparency portal reports
 <b>$32,666,271.83</b> while the agency's own produced vendor-payments
 export totals <b>$33,982,830.31</b> — a $1,316,558.48 divergence that
-decomposes exactly into three measured components.</dd>
+decomposes into three measured components at displayed precision.</dd>
 <dt>Stated obligation</dt>
 <dd>No statute requires the proactive feed; the finding bears on whether
 the published layer can substitute for the requested records.</dd>
@@ -172,7 +177,8 @@ different fiscal years.</li>
 The competing explanation is real and is itself the finding: the two
 totals measure spending under different definitions (all disbursements
 vs. external vendor payments; appropriation-year vs. transaction-date
-bucketing). Neither total is "wrong."</dd>
+bucketing). The discrepancy alone does not establish that either total
+is wrong.</dd>
 <dt>Witnesses</dt>
 <dd><a href="../scoreboard.html#rrg-64">RRG-64</a> (OWRD production)
 vs. portal API aggregates; a per-vendor difference table is maintained
@@ -191,10 +197,10 @@ which the F1-style portal referral would leave undone.</dd>
 <h2>F4 — Desk-level fee treatment, including narrowing-immune estimates</h2>
 <dl>
 <dt>Claim</dt>
-<dd>For the same statutory fee authority and near-identical asks, desks
-produced outcomes ranging from free full exports to four-figure
-estimates — and at least two estimates were structured so that reducing
-the request's scope does not reduce the price.</dd>
+<dd>Under the same statutory fee authority, desks produced outcomes
+ranging from free full exports to four-figure estimates — and at least
+two estimates were structured so that reducing the request's scope did
+not reduce the price.</dd>
 <dt>Stated obligation</dt>
 <dd>ORS 192.324(4): fees must be reasonably calculated to reimburse
 actual costs of making records available. ORS 192.324(5): fees shall be
@@ -205,25 +211,30 @@ an individualized determination.</dd>
 <ul>
 <li>Lane County Clerk #26-974: $728.89 estimate for aggregate annual
 counts. After a narrowing request, the county's estimate-defense
-(2026-11-13) priced it as "existence research" — 12 clerk-hours plus
-paralegal and attorney review — a price the scope reduction cannot
-touch. 60-day pay-or-close under ORS 192.329(3)(b).</li>
+(2026-11-13) priced 12 clerk-hours as research "to find and compile"
+records, plus paralegal coordination and attorney exemption review —
+a price the specific scope reduction did not reduce (our shorthand:
+"existence research" pricing). 60-day pay-or-close under ORS
+192.329(3)(b).</li>
 <li>Lane County Clerk #26-975: after a second scope reduction, the
 county's written reply (2026-11-17) stated "the fee estimate has not
 changed" — same immunity, on the record.</li>
-<li>PUC: $132.50 for three years or $88 for an already-prepared
-narrower file; prepayment required per OAR 860-001-0060(3); the
-billing/acceptance step requests name, company, address, and phone.</li>
+<li>PUC: ~$132 for three years or $88 for a one-year narrowed file;
+prepayment required per OAR 860-001-0060(3); the billing/acceptance
+step requests name, company, address, and phone.</li>
 <li>OSBEELS: opened with a PDF request form demanding name, address,
 phone, and signature; after an email-channel reply declining the form,
 the demand was dropped and the desk produced QuickBooks vendor exports —
 1,363 payment-level rows, ~$7.12M, FY2024–FY2026 — at no charge
 (2026-11-18).</li>
 <li>OWRD produced 14,264 payment-level rows and DSL a disbursement
-export at no charge — the same record class priced at $0 and at
-$728.89 by different desks in the same period.</li>
-<li>Waiver record: 23 waivers/reductions requested under ORS
-192.324(5); 2 granted, 5 denied (denials cited the requester's "plan
+export at no charge, while the Clerk priced an aggregate-counts
+request at $728.89 — different asks and record classes; the
+comparison demonstrates fee variance across desks, not like-for-like
+pricing of an identical record.</li>
+<li>Waiver record: 23 waiver/reduction requests across the corpus,
+including federal FOIA rows; 2 granted — one under ORS, one under
+federal FOIA — and 5 denied (denials cited the requester's "plan
 and ability to distribute the information" under the <em>In Defense of
 Animals v. OHSU</em> discretionary standard), remainder pending or
 mooted by free production.</li>
@@ -241,13 +252,13 @@ mooted by free production.</li>
 <a href="../requests/lane-county-26-971.html">#26-971</a>.</dd>
 <dt>What this does not establish</dt>
 <dd>That any single estimate exceeds the county's actual costs — the
-county's math is internally plausible. The finding is that identical
-asks price differently by desk, and that "existence research" pricing
-makes the fee structurally immune to the requester's statutory
-narrowing option.</dd>
+county's math is internally plausible, or that no narrowing could ever
+move an estimate — the two documented reductions did not. The finding
+is fee variance across desks and estimates priced on "find and
+compile" labor that the tested scope reductions did not touch.</dd>
 <dt>Status</dt>
-<dd>Documented; both narrowing-immunity instances are under petition
-(L3, L7) with the Lane County DA.</dd>
+<dd>Documented; both narrowing-immune estimates are under petition
+(L3, L7-975) with the Lane County DA.</dd>
 </dl>
 </section>
 
@@ -264,9 +275,12 @@ portal submission.</dd>
 <dt>Observed behavior</dt>
 <dd>
 <ul>
-<li>Four bodies — ODHS, DOC, OPRD, DPSST — categorically refused to
-process emailed requests and directed the requester to portal-only
-channels. All four refusals are under petition (L1, L5, L6, L7).</li>
+<li>Four bodies — ODHS, DOC, OPRD, DPSST — are logged as categorically
+refusing emailed requests and directing the requester to portal-only
+channels; verbatim refusal text is held for DOC ("we do not accept
+requests via email") and DPSST ("all records requests must be
+submitted through GovQA"). All four refusals are under petition
+(L1, L5, L6, L7-DPSST).</li>
 <li>The Criminal Justice Commission replied (2026-11-16) that a
 reference number exists only via the oregon.gov web form; staff then
 pasted our email into that form themselves, generating auto-confirmation
@@ -289,7 +303,8 @@ The channel-switch letter is itself part of the record.</li>
 <dd>That portals exist to obstruct — they carry real workflow value for
 the agency and produce ticket numbers the requester can cite. The
 finding is that the portal demand is a desk posture, not a legal
-requirement, and collapses on the desks' own re-filing behavior.</dd>
+requirement — agency-side re-filing is an observed alternative to
+requiring requester resubmission.</dd>
 <dt>Status</dt>
 <dd>Documented; the four hard refusals are petitioned.</dd>
 </dl>
@@ -300,20 +315,24 @@ requirement, and collapses on the desks' own re-filing behavior.</dd>
 <dl>
 <dt>Claim</dt>
 <dd>Even where records are released, the mechanics of delivery —
-image-only PDFs, link-only portal notices, portal-download-required —
-can reduce or eliminate the record's usability.</dd>
+image-only PDFs, link-only portal notices — can reduce the record's
+immediate usability or add retrieval steps.</dd>
 <dt>Observed behavior</dt>
-<dd>Deliveries observed include a scanned image-only PDF (no text
-layer), portal notices containing no records (documents must be fetched
-inside the portal session), and portal-bound files requiring an account
-the requester declined to create.</dd>
+<dd>Eugene's PRR-2026-896 payroll production (RRG-13) arrived as a
+scanned image-only PDF — no text layer — after the desk declined the
+requested CSV; the completion notice contained a link rather than the
+records themselves (the documents were publicly retrievable at the
+posted link — no account was required). A GovQA auto-acknowledgment at
+DOC (RRG-49) shows the same channel mechanics at intake.</dd>
 <dt>Witnesses</dt>
-<dd><a href="../scoreboard.html#rrg-93">RRG-93</a>,
-<a href="../scoreboard.html#rrg-49">RRG-49</a>,
-<a href="../scoreboard.html#rrg-152">RRG-152</a>.</dd>
+<dd><a href="../scoreboard.html#rrg-13">RRG-13</a> /
+<a href="../requests/eugene-prr-2026-896.html">PRR-2026-896</a>;
+<a href="../scoreboard.html#rrg-49">RRG-49</a> (GovQA auto-ack).</dd>
 <dt>What this does not establish</dt>
-<dd>Intent — each mechanism is defensible on IT/security grounds. This
-is the weakest of the published findings and is kept for completeness.</dd>
+<dd>Intent — delivery-format choices may be defensible on IT or
+security grounds; that rationale is not established by the
+correspondence. This is the weakest of the published findings and is
+kept for completeness.</dd>
 <dt>Status</dt>
 <dd>Documented (weakest).</dd>
 </dl>
@@ -323,7 +342,7 @@ is the weakest of the published findings and is kept for completeness.</dd>
 <h2>F7 — Mass nonresponse; the petition layer is itself silent</h2>
 <dl>
 <dt>Claim</dt>
-<dd>One-third of the identical wave-2 state requests were never
+<dd>49 of the 108 identical wave-2 state requests (45%) were never
 acknowledged at all — past the statutory acknowledgment window — and
 the escalation venue the statute provides has so far produced zero
 orders, including on petitions whose own 7-day order clocks have
@@ -333,28 +352,32 @@ lapsed.</dd>
 192.415/192.418: on petition, the DA (county) or Attorney General
 (state) shall issue an order within seven days.</dd>
 <dt>Observed behavior</dt>
-<dd>53 of 163 sent requests were logged as nonresponses past the
-acknowledgment window on 2026-11-20. Eighteen petitions for review have
-been filed (L1–L18): channel refusals (L1, L5, L6, L7), constructive
-denial via narrowing-immune fees (L3, L7), a fee-waiver denial (L4), a
-batch of categorical nonresponses (L8–L17), and a sheriff
-in-custody-deaths request (L18). The earliest petitions' statutory
-7-day order clocks have lapsed; as of 2026-11-23 no order has been
-received on any petition. The oversight layer is exhibiting the same
-nonresponse behavior the petitions document.</dd>
+<dd>53 ledger rows carry a nonresponse tag; excluding two
+delivery-unverified sends and one bounced re-send, <b>50 rows</b> are
+labeled nonresponsive as of 2026-11-23 — 49 of them among the 108
+canonical state requests (45%), plus one sheriff in-custody-deaths
+request. Eighteen petitions for review have been logged as filed
+(L1–L18): channel refusals (L1, L5, L6, L7-DPSST), constructive denial
+via narrowing-immune fees (L3, L7-975), a fee-waiver denial (L4), a
+batch of categorical nonresponses (L8–L17), and the sheriff request
+(L18). Filing dates are ledger-logged from send records; the petition
+texts are held as drafts. The earliest petitions' statutory 7-day
+order clocks have lapsed; as of 2026-11-23 no order has been received
+on any petition — a narrower observation than "the oversight layer did
+nothing."</dd>
 <dt>Witnesses</dt>
 <dd>Scoreboard rows carrying "Nonresponse past ORS 192.324 ack window"
-status (53 rows); petition filings noted on
+status (50 rows); petition filings noted on
 <a href="../scoreboard.html#rrg-10">RRG-10</a>,
 <a href="../scoreboard.html#rrg-21">RRG-21</a>,
 <a href="../scoreboard.html#rrg-93">RRG-93</a>, and the L8–L17 batch
 rows.</dd>
 <dt>What this does not establish</dt>
-<dd>That nonresponses are deliberate — a share of any 130-desk sweep
+<dd>That nonresponses are deliberate — a share of any ~130-desk sweep
 will be address rot, spam filtering, or staffing. The finding is the
-distribution: silence is the modal outcome for unwatched requests, and
-the petition remedy — the statute's own counter-pressure — currently
-imposes no observable cost either.</dd>
+count and the elapsed clocks: nearly half the identical canonical asks
+past the acknowledgment window, and zero orders received on petitions
+whose statutory clocks have run.</dd>
 <dt>Status</dt>
 <dd>Documented; order clocks remain open. Each lapsed clock is itself
 a scorecard datum.</dd>
@@ -368,27 +391,29 @@ a scorecard datum.</dd>
 <dd>The hardest failures are not refusals but vacuums: subjects where a
 physical or administrative reality exists and no entity is obligated to
 hold records for it — so every desk's "no responsive records" is
-individually true and collectively damning.</dd>
+individually true while no custodian has been identified among the
+desks asked.</dd>
 <dt>Stated obligation</dt>
 <dd>ORS 192 obligates custodians of existing records; it cannot
 obligate a custodian for records nobody was charged with keeping.</dd>
 <dt>Observed behavior</dt>
-<dd>The Millrace diversion dam — a low-head structure on Eugene's
-millrace with a documented history of fatalities — was asked about at
-three desks. OWRD's dam-safety program confirmed low-head dams are not
-state-regulated: no statutory dam named Millrace in Lane County, no
-inventory or file; an email search found zero OWRD↔City/EWEB
-correspondence on any dam-name variant. EWEB's records custodian
-disclaimed that the utility <em>ever</em> owned the canal or diversion
-dam — a liability-framed answer, not a records answer. The City
-request is in flight. The structure exists and periodically kills
-people; in the records system it has no custodian.
-A related pattern: nine of nine "rollup" agencies — boards whose
-spending runs through a parent department — answered the
-vendor-payments ask "no responsive records," even though the spending
-is public under the parent's code. Each answer may be individually
-accurate; the class of records is unreachable through the desks that
-should own it. A contrasting instance shows the working resolution
+<dd>The Millrace diversion dam — a functioning low-head structure on
+Eugene's millrace — was asked about at three desks. OWRD's dam-safety
+program confirmed low-head dams are not state-regulated: no statutory
+dam named Millrace in Lane County, no inventory or file; an email
+search found zero OWRD↔City/EWEB correspondence on any dam-name
+variant. EWEB's records custodian responded that the utility "does not
+own and has never owned" the canal or diversion dam and stated no
+responsive records for several items. The City request is in flight.
+The structure exists; among the desks asked so far, no custodian has
+been identified.
+A related pattern, researcher-reported: nine of nine "rollup" agencies
+— boards whose spending runs through a parent department — answered
+the vendor-payments ask "no responsive records," even though the
+spending is public under the parent's code. Each answer may be
+individually accurate; the nine underlying replies and parent-code
+evidence are summarized in the ledger, not reproduced here. A
+contrasting instance shows the working resolution
 path: Lane County's released ESS contract set appeared to skip
 Amendment #2 and four Exhibit C revisions; when asked under ticket
 26-1083 the county certified the released set complete — the gaps were
@@ -407,10 +432,10 @@ rollup no-records rows e.g.
 (ESS set — resolved numbering gap).</dd>
 <dt>What this does not establish</dt>
 <dd>That records were destroyed or that any desk's absence claim is
-false — "no responsive records" is unfalsifiable from outside, and that
-unfalsifiability is itself part of the finding: the places custody
-cannot be audited are exactly where responsibility was diffused enough
-to leave no custodian.</dd>
+false — a "no responsive records" answer is largely unfalsifiable from
+outside, though contradictory records could refute it. Nor does it
+establish that no entity holds recordkeeping obligations — custody may
+exist at a desk not yet asked; the City response is pending.</dd>
 <dt>Status</dt>
 <dd>Documented; City response pending.</dd>
 </dl>
@@ -438,8 +463,8 @@ threads, not controls. <b>Federal rows run under FOIA</b> (5 U.S.C.
 §552, 20-business-day determination, federal FY ending September 30) —
 a different statute and clock; they are published in the same ledger
 but are not part of the ORS rates.</p>
-<p><b>What the rates mean.</b> Figures like "53 of 163 unacknowledged"
-describe <em>this corpus</em> — one requester, identical asks, a
+<p><b>What the rates mean.</b> Figures like "49 of 108 canonical
+requests unacknowledged (45%)" describe <em>this corpus</em> — one requester, identical asks, a
 defined denominator — not the rate at which all requesters or all
 requests are ignored. The instrument measures desk behavior under an
 email-channel requester posture; portal-first requesters may see

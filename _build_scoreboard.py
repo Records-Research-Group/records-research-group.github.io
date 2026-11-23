@@ -50,18 +50,24 @@ def agency_name(slug):
     return n.split(" — ")[0].split(" (")[0].strip()
 
 def resp_dates(notes):
-    ds = re.findall(r"resp=[^\s;,\]]+(?:\s*\[[^\]]*\])?\s*(20\d\d-\d\d-\d\d)", notes)
+    # exclude bounce entries — a delivery failure is not a substantive response
+    ds = []
+    for m in re.finditer(r"resp=[^\[;]+?\[([^\]]+)\]\s*(20\d\d-\d\d-\d\d)", notes):
+        if m.group(1).strip().lower().startswith("bounce"):
+            continue
+        ds.append(m.group(2))
     return min(ds) if ds else ""
 
 def last_outcome(notes):
-    tags = re.findall(r"resp=[^\s;,\]]+\s*\[([^\]]+)\]", notes)
+    # resp tag may cover multiple files: resp=a.eml + b.eml [tag]
+    tags = re.findall(r"resp=[^\[;]+?\[([^\]]+)\]", notes)
     return tags[-1] if tags else ""
 
 def fee(notes):
-    m = re.search(r"(?:fee-quote|invoice|estimate|fee-flex)[^\n$;]*\$([\d,]+\.?\d*)", notes)
+    m = re.search(r"(?:fee-quote|invoice|estimate|fee-flex|INV-?\d)[^\n$;]*\$([\d,]+\.?\d*)", notes)
     if m:
         return m.group(1)
-    m = re.search(r"(?:fee-quote|invoice|estimate|fee-flex)[^\n;]*?~?([\d,]+\.?\d*)\s*USD", notes)
+    m = re.search(r"(?:fee-quote|invoice|estimate|fee-flex|INV-?\d)[^\n;]*?~?([\d,]+\.?\d*)\s*USD", notes)
     return m.group(1) if m else ""
 
 def waiver_out(notes):
@@ -108,6 +114,9 @@ def status_of(row, notes):
     n = notes
     st = row["status"]
     tag = last_outcome(n)
+    resends = {"32": "66", "47": "65", "25": "20"}  # bounced row re-sent; not an independent desk
+    if row["id"] in resends:
+        return f"Bounced — re-sent as RRG-{resends[row['id']]}", tag
     if "nonresponse-finding" in n:
         if "delivery unverified" in n:
             return "No response on file (send-desk delivery unverified)", tag
@@ -118,7 +127,7 @@ def status_of(row, notes):
         return "Withdrawn (superseded by duplicate filing)", tag
     if st in ("drafted", "scheduled"):
         return f"{st.capitalize()} — not yet sent", tag
-    produced = re.search(r"\[production|\[delivery|\[completed|_released\.eml|PRODUCTION|\[produced", n)
+    produced = re.search(r"\[production|\[delivery|\[completed|production-complete|production-attachment|_released\.eml|PRODUCTION|\[produced", n)
     lead = ""
     if produced:
         lead = "Produced"
@@ -158,7 +167,7 @@ for r in rows:
     if fr: first_resp_n += 1
     status, tag = status_of(r, notes)
     if produced := re.search(r"\bProduced\b", status): produced_n += 1
-    if "Nonresponse past" in status or "No response on file" in status: nonresp_n += 1
+    if "Nonresponse past" in status: nonresp_n += 1
     if "Bounced" in status: bounce_n += 1
     fee_amt = fee(notes)
     if fee_amt:
@@ -205,8 +214,14 @@ for r in out:
                f'<td>{r["filed"]}</td><td>{r["first_response"] or "—"}</td><td>{esc(r["status"])}</td>'
                f'<td class="num">{fee_c}</td><td>{esc(wav)}</td></tr>')
 
+# resend pairs: an earlier bounced row is not an independent desk
 sent_n = sum(1 for r in rows if (r.get("sent") or ""))
-ag_n = len({r["agency"] for r in rows if (r.get("sent") or "")})
+ag_n = len({r["agency"] for r in rows if (r.get("sent") or "") and r["id"] not in {"32","47","25"}})
+canon_n = sum(1 for r in rows if r["template"] == "sweep_vendor_payments" and (r.get("sent") or ""))
+canon_nr = sum(1 for r in rows if r["template"] == "sweep_vendor_payments"
+               and r["id"] not in {"32","47","25"}
+               and "nonresponse-finding" in (r.get("notes") or "")
+               and "delivery unverified" not in r["notes"])
 html = f'''<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -241,15 +256,16 @@ accessibility study</a>.</p>
 <table class="stats">
 <tr><th>Measure</th><th>Value</th></tr>
 <tr><td>Requests filed (Oct–Nov 2026 waves)</td><td class="num">{sent_n}</td></tr>
-<tr><td>Agencies covered (state, county, municipal, federal)</td><td class="num">{ag_n}</td></tr>
-<tr><td>Requests with a recorded first response</td><td class="num">{first_resp_n} of {sent_n}</td></tr>
+<tr><td>Distinct agencies (bounce re-sends deduplicated)</td><td class="num">{ag_n}</td></tr>
+<tr><td>Requests with a recorded first response (excl. bounces)</td><td class="num">{first_resp_n} of {sent_n}</td></tr>
+<tr><td>Canonical state sweep rows (identical vendor-payments ask)</td><td class="num">{canon_n}</td></tr>
 <tr><td>Record sets produced</td><td class="num">{produced_n}</td></tr>
 <tr><td>Fee estimates issued</td><td class="num">{fee_n} requests — ${fee_total:,.2f} total quoted</td></tr>
 <tr><td>Fees paid to date</td><td class="num">$0</td></tr>
 <tr><td>Fee waivers requested (ORS 192.324(5))</td><td class="num">{waivers['req']}</td></tr>
 <tr><td>&nbsp;&nbsp;— granted (incl. federal FOIA)</td><td class="num">{waivers['granted']}</td></tr>
 <tr><td>&nbsp;&nbsp;— denied</td><td class="num">{waivers['denied']}</td></tr>
-<tr><td>Categorical nonresponses past ORS ack window</td><td class="num">{nonresp_n}</td></tr>
+<tr><td>Nonresponses past ORS ack window — logged or petitioned</td><td class="num">{nonresp_n} ({canon_nr} of {canon_n} canonical rows = {canon_nr/canon_n:.1%})</td></tr>
 <tr><td>Petitions for review filed (ORS 192.415 / AG)</td><td class="num">{len(petitions)}</td></tr>
 <tr><td>Bounced addresses (dead directory entries)</td><td class="num">{bounce_n}</td></tr>
 </table>
