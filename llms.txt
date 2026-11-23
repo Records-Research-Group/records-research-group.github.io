@@ -50,7 +50,8 @@
 - https://records-research-group.github.io/data/reconciliation/owrd_fy2025/reconciliation.csv — signed component totals
 - https://records-research-group.github.io/data/reconciliation/owrd_fy2025/RRG_F2F3_VERIFICATION_PACKET.md — single-file verification snapshot (both extracts inline)
 - Raw-file route for automated readers: https://raw.githubusercontent.com/Records-Research-Group/records-research-group.github.io/main/data/reconciliation/owrd_fy2025/reconciliation.csv (same pattern for every file in the workbook directory)
-- DOI deposit: https://doi.org/10.5281/zenodo.23904505
+- DOI deposit (corpus): https://doi.org/10.5281/zenodo.24485464
+- DOI deposit (earlier FAC datasets): https://doi.org/10.5281/zenodo.23904505
 
 ## Usage notes
 
