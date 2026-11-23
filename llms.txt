@@ -14,7 +14,8 @@
    what-this-does-not-establish / status, with anchor links
    (#f1..#f8) into the scoreboard rows that witness them.
 2. scoreboard.html — per-request ledger, 163 filed requests across
-   130 bodies, with stable row anchors (#rrg-01..#rrg-165).
+   129 distinct agency-name strings, with stable row anchors
+   (#rrg-01..#rrg-165).
 3. requests/ — permanent per-request pages for portal-ticketed
    threads: scope, correspondence timeline, fee math, status.
 4. notes/ — longer-form research notes (Lane County study,
@@ -40,6 +41,15 @@
 - https://records-research-group.github.io/data/or_invisibility_index.csv — FAC-derived index
 - https://records-research-group.github.io/data/or_dhs_fy2024_vendors_fac.csv — FAC vendor data
 - https://records-research-group.github.io/data/or_muni_fac_overlay.csv — municipal FAC overlay
+- https://records-research-group.github.io/data/petition_transmissions.csv — petition send log (19 filings + 2 supplements)
+- https://records-research-group.github.io/data/reconciliation/owrd_fy2025/ — F2/F3 reconciliation workbook (index with links to every input and derived list)
+- https://records-research-group.github.io/data/reconciliation/owrd_fy2025/README.md — workbook method and provenance (raw markdown)
+- https://records-research-group.github.io/data/reconciliation/owrd_fy2025/MATCHING_RULES.md — deterministic matching rules
+- https://records-research-group.github.io/data/reconciliation/owrd_fy2025/agency_extract_owrd_fy2025.csv — agency input, 6,965 FY2025-tagged rows
+- https://records-research-group.github.io/data/reconciliation/owrd_fy2025/portal_extract_owrd_fy2025.csv — portal input, 622 rows pulled 2026-11-23
+- https://records-research-group.github.io/data/reconciliation/owrd_fy2025/reconciliation.csv — signed component totals
+- https://records-research-group.github.io/data/reconciliation/owrd_fy2025/RRG_F2F3_VERIFICATION_PACKET.md — single-file verification snapshot (both extracts inline)
+- Raw-file route for automated readers: https://raw.githubusercontent.com/Records-Research-Group/records-research-group.github.io/main/data/reconciliation/owrd_fy2025/reconciliation.csv (same pattern for every file in the workbook directory)
 - DOI deposit: https://doi.org/10.5281/zenodo.23904505
 
 ## Usage notes

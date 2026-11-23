@@ -29,7 +29,8 @@ OWRD portion of F2 (person-payee exclusion). Published 2026-11-23.
 | Portal-only payees | 22 | −$5,293,327.98 |
 | Shared-vendor net delta | 374 (131 nonzero) | +$2,486,904.79 |
 
-Components sum exactly to the gap. See `reconciliation.csv`.
+Components sum exactly to the gap. See
+[reconciliation.csv](reconciliation.csv).
 
 ## Reading the components
 
@@ -76,7 +77,22 @@ GET https://data.oregon.gov/resource/y9g9-xsxs.json
 # payee match key: upper(name), strip non-alphanumeric, collapse spaces
 ```
 
-Files: `portal_extract_owrd_fy2025.csv`, `agency_extract_owrd_fy2025.csv`,
-`unmatched_production_only.csv`, `unmatched_portal_only.csv`,
-`shared_vendor_delta.csv`, `f2_person_payees_owrd.csv`,
-`f2_person_payees_dsl.csv`, `reconciliation.csv`.
+## Files
+
+Reading order: rules → inputs → component table → lists → F2 lists.
+
+| File | Contents |
+|---|---|
+| [MATCHING_RULES.md](MATCHING_RULES.md) | Deterministic payee-key, fiscal-year, and component definitions. No manual name reconciliation. |
+| [agency_extract_owrd_fy2025.csv](agency_extract_owrd_fy2025.csv) | Agency input: 6,965 production rows the agency tagged `Fiscal Year = 2025`, from the 14,257-row OWRD production workbook. |
+| [portal_extract_owrd_fy2025.csv](portal_extract_owrd_fy2025.csv) | Portal input: 622 rows pulled 2026-11-23 from data.oregon.gov `y9g9-xsxs` (`agency='690'`, `fiscal_year='2025'`). |
+| [reconciliation.csv](reconciliation.csv) | Signed component totals; components sum to the $1,316,558.48 gap exactly. |
+| [unmatched_production_only.csv](unmatched_production_only.csv) | 246 production payees absent from the portal extract (+$4,122,981.67). |
+| [unmatched_portal_only.csv](unmatched_portal_only.csv) | 22 portal payees absent from the agency extract (−$5,293,327.98). |
+| [shared_vendor_delta.csv](shared_vendor_delta.csv) | 374 payee keys present in both extracts with per-vendor delta; 131 carry nonzero delta (+$2,486,904.79 net). |
+| [f2_person_payees_owrd.csv](f2_person_payees_owrd.csv) | F2 person-payee list, OWRD: production-only payees under the obj 6801/6725 + fund 4330 filter (131 names across all production years). |
+| [f2_person_payees_dsl.csv](f2_person_payees_dsl.csv) | F2 person-payee list, DSL: 17 production-only payees under the stated window — a partial-scope comparison. |
+| [RRG_F2F3_VERIFICATION_PACKET.md](RRG_F2F3_VERIFICATION_PACKET.md) | Single-file verification snapshot: this README, the matching rules, all component lists, and both full extracts inline. Generated 2026-11-23; the individual files above are authoritative. |
+
+Raw-file routes for automated readers:
+`https://raw.githubusercontent.com/Records-Research-Group/records-research-group.github.io/main/data/reconciliation/owrd_fy2025/<filename>`
