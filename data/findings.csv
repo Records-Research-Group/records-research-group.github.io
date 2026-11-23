@@ -1,0 +1,9 @@
+finding_id,title,bodies_covered,evidence_refs,status,page,published
+F1,Transparency-dead-zone deflection,"OWEB; OBCE; DEQ","RRG-30; RRG-96; RRG-35",Documented,findings/index.html#f1,2026-11-23
+F2,Person-payee exclusion from published feeds,Springfield,"RRG-14; RRG-15",Documented — mechanism open,findings/index.html#f2,2026-11-23
+F3,Portal-to-ledger divergence ($1.32M),Lane County,RRG-16,Documented,findings/index.html#f3,2026-11-23
+F4,"Desk-level fee treatment, incl. narrowing-immune estimates","Lane County Clerk; Lane County; PUC; OSBEELS; OWRD; DSL; Eugene; 4J","RRG-10; RRG-21; RRG-94; RRG-76; RRG-66; RRG-64; RRG-17",Documented — under petition L3/L7,findings/index.html#f4,2026-11-23
+F5,Email channel accepted in law but refused at desks,"ODHS; DOC; OPRD; DPSST; CJC; Lane County; Eugene","RRG-93; RRG-71; RRG-152; RRG-165",Documented — under petition L1/L5/L6/L7,findings/index.html#f5,2026-11-23
+F6,Delivery mechanics as friction,"DPSST; others","RRG-93; RRG-49; RRG-152",Documented (weakest),findings/index.html#f6,2026-11-23
+F7,Mass nonresponse and silent petition layer,"53 nonresponders; 18 petitions filed (L1-L18)","scoreboard nonresponse rows; petition filings",Documented — order clocks open,findings/index.html#f7,2026-11-23
+F8,Custodianship seams — responsibility vacuum,"OWRD; EWEB; City of Eugene; 9 rollup boards; Lane County ESS set","RRG-154; RRG-155; RRG-153; RRG-80; RRG-81; 26-1032",Documented — City pending,findings/index.html#f8,2026-11-23

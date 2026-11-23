@@ -1,0 +1,52 @@
+# Records Research Group
+
+> Independent, non-commercial public-records accessibility research.
+> Measures the gap between Oregon public-bodies' stated records
+> obligations and their observed handling of requests — fees,
+> channels, waivers, productions, nonresponses, petitions. Oregon
+> Public Records Law (ORS 192.311 et seq.) scope, Oct–Nov 2026;
+> federal FOIA variant at a small federal set. All outputs CC0.
+
+## Reading order for a researcher
+
+1. findings/ — eight documented findings, each formatted
+   claim / stated obligation / observed behavior / witnesses /
+   what-this-does-not-establish / status, with anchor links
+   (#f1..#f8) into the scoreboard rows that witness them.
+2. scoreboard.html — per-request ledger, 163 filed requests across
+   130 bodies, with stable row anchors (#rrg-01..#rrg-165).
+3. requests/ — permanent per-request pages for portal-ticketed
+   threads: scope, correspondence timeline, fee math, status.
+4. notes/ — longer-form research notes (Lane County study,
+   Wellpath contract, housing-response spend).
+5. data/ — machine-readable datasets (CSV).
+
+## Canonical URLs
+
+- https://records-research-group.github.io/
+- https://records-research-group.github.io/findings/
+- https://records-research-group.github.io/scoreboard.html
+- https://records-research-group.github.io/requests/
+- https://records-research-group.github.io/notes/2026-10-lane-county-study.html
+- https://records-research-group.github.io/notes/2026-11-wellpath-57233-contract.html
+- https://records-research-group.github.io/notes/2026-11-lane-county-housing-response-spend.html
+
+## Datasets
+
+- https://records-research-group.github.io/data/accessibility_scoreboard.csv — request ledger
+- https://records-research-group.github.io/data/findings.csv — finding index
+- https://records-research-group.github.io/data/wellpath_57233_contract_ladder.csv — contract instrument ladder
+- https://records-research-group.github.io/data/lane_county_housing_response_rollup.csv — spend rollup
+- https://records-research-group.github.io/data/or_invisibility_index.csv — FAC-derived index
+- https://records-research-group.github.io/data/or_dhs_fy2024_vendors_fac.csv — FAC vendor data
+- https://records-research-group.github.io/data/or_muni_fac_overlay.csv — municipal FAC overlay
+- DOI deposit: https://doi.org/10.5281/zenodo.23904505
+
+## Usage notes
+
+- Quotes in request-page timelines are from agency correspondence;
+  primary correspondence is held in an internal archive and is
+  public-record in principle at each body.
+- Findings explicitly list what the evidence does NOT establish;
+  prefer citing a finding's non-claims alongside its claim.
+- Attribution/CC0: free reuse; cite the page URL + as-of date.

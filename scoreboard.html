@@ -5,14 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Public-records accessibility scoreboard — Records Research Group</title>
 <style>
-  body { font-family: Georgia, serif; max-width: 60rem; margin: 3rem auto;
+  body { font-family: Georgia, serif; max-width: 68rem; margin: 3rem auto;
          padding: 0 1rem; color: #1a1a1a; line-height: 1.6; }
   h1 { font-size: 1.5rem; }
-  table { border-collapse: collapse; width: 100%; font-size: .88rem; }
-  th, td { border: 1px solid #bbb; padding: .35rem .5rem; text-align: left;
+  table { border-collapse: collapse; width: 100%; font-size: .84rem; }
+  th, td { border: 1px solid #bbb; padding: .3rem .45rem; text-align: left;
            vertical-align: top; }
-  th { background: #f0f0f0; }
-  .stats td:first-child { width: 55%; }
+  th { background: #f0f0f0; position: sticky; top: 0; }
+  .stats td:first-child { width: 60%; }
   .num { text-align: right; white-space: nowrap; }
   .note { color: #555; font-size: .95rem; }
 </style>
@@ -20,60 +20,206 @@
 <body>
 <p><a href="index.html">&larr; Records Research Group</a></p>
 <h1>Public-records accessibility scoreboard</h1>
-<p class="note">As of 2026-11-02. The accessibility record itself —
+<p class="note">As of 2026-11-23. The accessibility record itself —
 what was requested, acknowledged, quoted, waived, denied, and produced —
 is published here as a dataset. Machine-readable source:
 <a href="data/accessibility_scoreboard.csv">accessibility_scoreboard.csv</a>.
-Study context: <a href="notes/2026-10-lane-county-study.html">Lane County
-records accessibility study</a>.</p>
+Per-finding analysis: <a href="findings/">findings</a>. Study context:
+<a href="notes/2026-10-lane-county-study.html">Lane County records
+accessibility study</a>.</p>
 
 <h2>Summary</h2>
 <table class="stats">
 <tr><th>Measure</th><th>Value</th></tr>
-<tr><td>Requests filed (all 2026-10-26)</td><td class="num">21</td></tr>
-<tr><td>Agencies covered</td><td class="num">6</td></tr>
-<tr><td>Requests with a recorded first response</td><td class="num">15 of 21</td></tr>
-<tr><td>Median days to first response</td><td class="num">0 (same day)</td></tr>
-<tr><td>Fee estimates issued</td><td class="num">4 requests — $1,284.59 total</td></tr>
+<tr><td>Requests filed (Oct–Nov 2026 waves)</td><td class="num">163</td></tr>
+<tr><td>Agencies covered (state, county, municipal, federal)</td><td class="num">130</td></tr>
+<tr><td>Requests with a recorded first response</td><td class="num">89 of 163</td></tr>
+<tr><td>Record sets produced</td><td class="num">19</td></tr>
+<tr><td>Fee estimates issued</td><td class="num">9 requests — $4,851.61 total quoted</td></tr>
 <tr><td>Fees paid to date</td><td class="num">$0</td></tr>
-<tr><td>Fee waivers/reductions requested (ORS 192.324(5))</td><td class="num">4</td></tr>
-<tr><td>&nbsp;&nbsp;— granted</td><td class="num">0</td></tr>
-<tr><td>&nbsp;&nbsp;— denied</td><td class="num">2 (both Lane County, 2026-11-02)</td></tr>
-<tr><td>&nbsp;&nbsp;— pending</td><td class="num">2</td></tr>
-<tr><td>Record sets produced to date</td><td class="num">0 (one no-charge production accepted, pending)</td></tr>
+<tr><td>Fee waivers requested (ORS 192.324(5))</td><td class="num">23</td></tr>
+<tr><td>&nbsp;&nbsp;— granted (incl. federal FOIA)</td><td class="num">2</td></tr>
+<tr><td>&nbsp;&nbsp;— denied</td><td class="num">5</td></tr>
+<tr><td>Categorical nonresponses past ORS ack window</td><td class="num">53</td></tr>
+<tr><td>Petitions for review filed (ORS 192.415 / AG)</td><td class="num">18</td></tr>
+<tr><td>Bounced addresses (dead directory entries)</td><td class="num">13</td></tr>
 </table>
 
 <h2>Per-request ledger</h2>
 <table>
 <tr><th>Ref</th><th>Agency</th><th>Ticket</th><th>Subject</th><th>Filed</th><th>First response</th><th>Status</th><th>Fee quoted</th><th>Waiver</th></tr>
-<tr><td>RRG-01</td><td>Oregon DHS/OHA</td><td></td><td>Vendor payments</td><td>2026-10-26</td><td>2026-10-26</td><td>Acknowledged — in review</td><td class="num">—</td><td>—</td></tr>
-<tr><td>RRG-02</td><td>Oregon DHS/OHA</td><td></td><td>Provider activation records</td><td>2026-10-26</td><td>2026-10-26</td><td>Acknowledged — in review</td><td class="num">—</td><td>—</td></tr>
-<tr><td>RRG-03</td><td>Oregon DHS/OHA</td><td></td><td>Vendor payments</td><td>2026-10-26</td><td>—</td><td>In processing</td><td class="num">—</td><td>—</td></tr>
-<tr><td>RRG-04</td><td>Oregon DHS/OHA</td><td></td><td>Contract documents</td><td>2026-10-26</td><td>2026-10-26</td><td>Acknowledged — in review</td><td class="num">—</td><td>—</td></tr>
-<tr><td>RRG-05</td><td>Oregon DHS/OHA</td><td></td><td>Investigation files</td><td>2026-10-26</td><td>2026-10-26</td><td>Acknowledged — in review</td><td class="num">—</td><td>—</td></tr>
-<tr><td>RRG-06</td><td>Oregon DHS/OHA</td><td></td><td>Contract documents</td><td>2026-10-26</td><td>—</td><td>In processing</td><td class="num">—</td><td>—</td></tr>
-<tr><td>RRG-07</td><td>Oregon DHS/OHA</td><td></td><td>Policy documents</td><td>2026-10-26</td><td>2026-10-26</td><td>Acknowledged — in review</td><td class="num">—</td><td>—</td></tr>
-<tr><td>RRG-08</td><td>Oregon DHS/OHA</td><td></td><td>Quarterly reports</td><td>2026-10-26</td><td>2026-10-26</td><td>Acknowledged — in review</td><td class="num">—</td><td>—</td></tr>
-<tr><td>RRG-09</td><td>Oregon DHS/OHA</td><td></td><td>Program statistics</td><td>2026-10-26</td><td>2026-10-26</td><td>Acknowledged — in review</td><td class="num">—</td><td>—</td></tr>
-<tr><td>RRG-10</td><td>Lane County Clerk</td><td><a href="requests/lane-county-clerk-26-974.html">26-974</a></td><td>Voter-roll maintenance statistics</td><td>2026-10-26</td><td>2026-10-26</td><td>Waiver denied — fee decision pending; narrowing to aggregate counts requested 11-02</td><td class="num">$728.89</td><td>denied 2026-11-02</td></tr>
-<tr><td>RRG-11</td><td>Oregon DHS/OHA</td><td></td><td>Program statistics</td><td>2026-10-26</td><td>—</td><td>In processing</td><td class="num">—</td><td>—</td></tr>
-<tr><td>RRG-12</td><td>City of Eugene</td><td><a href="requests/eugene-prr-2026-896.html">PRR-2026-896</a></td><td>Check register / vendor payments</td><td>2026-10-26</td><td>2026-10-26</td><td>Estimate issued — waiver pending</td><td class="num">$277.20</td><td>pending</td></tr>
-<tr><td>RRG-13</td><td>City of Eugene</td><td></td><td>Payroll</td><td>2026-10-26</td><td>2026-10-26</td><td>Acknowledged — in processing</td><td class="num">—</td><td>—</td></tr>
-<tr><td>RRG-14</td><td>City of Springfield</td><td></td><td>Checkbook</td><td>2026-10-26</td><td>—</td><td>In processing</td><td class="num">—</td><td>—</td></tr>
-<tr><td>RRG-15</td><td>City of Springfield</td><td></td><td>Payroll</td><td>2026-10-26</td><td>—</td><td>In processing</td><td class="num">—</td><td>—</td></tr>
-<tr><td>RRG-16</td><td>Lane County</td><td><a href="requests/lane-county-26-968.html">26-968</a></td><td>Vendor disbursements / check register</td><td>2026-10-26</td><td>2026-10-29</td><td>Acknowledged — in processing</td><td class="num">—</td><td>—</td></tr>
-<tr><td>RRG-17</td><td>Lane County</td><td><a href="requests/lane-county-26-971.html">26-971</a></td><td>Employee payroll (name, title, dept, gross wages)</td><td>2026-10-26</td><td>2026-10-26</td><td>Waiver denied — no-charge list (no wage fields) accepted; wage estimate under evaluation</td><td class="num">$186.48</td><td>denied 2026-11-02</td></tr>
-<tr><td>RRG-18</td><td>Oregon DHS/OHA</td><td></td><td>Checkbook</td><td>2026-10-26</td><td>2026-10-26</td><td>Acknowledged — in review</td><td class="num">—</td><td>—</td></tr>
-<tr><td>RRG-19</td><td>Oregon DHS/OHA</td><td></td><td>Payroll</td><td>2026-10-26</td><td>2026-10-26</td><td>Acknowledged — in review</td><td class="num">—</td><td>—</td></tr>
-<tr><td>RRG-20</td><td>Oregon Government Ethics Commission</td><td></td><td>Program statistics</td><td>2026-10-26</td><td>2026-10-26</td><td>Acknowledged</td><td class="num">—</td><td>—</td></tr>
-<tr><td>RRG-21</td><td>Lane County Clerk</td><td><a href="requests/lane-county-clerk-26-975.html">26-975</a></td><td>Voter-registration record review (one deceased registrant)</td><td>2026-10-26</td><td>2026-10-26</td><td>Estimate issued — waiver pending</td><td class="num">$92.22</td><td>pending</td></tr>
+<tr id="rrg-01"><td>RRG-01</td><td>Oregon Department of Human Services â€” Public Records Unit</td><td></td><td>Vendor payments</td><td>2026-10-26</td><td>2026-10-26</td><td>Acknowledged/responded; petition to DA/AG filed</td><td class="num">—</td><td>—</td></tr>
+<tr id="rrg-02"><td>RRG-02</td><td>Oregon Department of Human Services â€” Public Records Unit</td><td></td><td>Provider activation records</td><td>2026-10-26</td><td>2026-10-26</td><td>Acknowledged/responded</td><td class="num">—</td><td>—</td></tr>
+<tr id="rrg-03"><td>RRG-03</td><td>Oregon Department of Human Services â€” Public Records Unit</td><td></td><td>Vendor payments</td><td>2026-10-26</td><td>—</td><td>petition to DA/AG filed</td><td class="num">—</td><td>—</td></tr>
+<tr id="rrg-04"><td>RRG-04</td><td>Oregon Department of Human Services â€” Public Records Unit</td><td></td><td>Contract documents</td><td>2026-10-26</td><td>2026-10-26</td><td>Acknowledged/responded</td><td class="num">—</td><td>—</td></tr>
+<tr id="rrg-05"><td>RRG-05</td><td>Oregon Department of Human Services â€” Public Records Unit</td><td></td><td>Investigation files</td><td>2026-10-26</td><td>2026-10-26</td><td>Acknowledged/responded</td><td class="num">—</td><td>—</td></tr>
+<tr id="rrg-06"><td>RRG-06</td><td>Oregon Department of Human Services â€” Public Records Unit</td><td></td><td>Contract documents</td><td>2026-10-26</td><td>—</td><td>petition to DA/AG filed</td><td class="num">—</td><td>—</td></tr>
+<tr id="rrg-07"><td>RRG-07</td><td>Oregon Department of Human Services â€” Public Records Unit</td><td></td><td>Policy documents</td><td>2026-10-26</td><td>2026-10-26</td><td>Acknowledged/responded</td><td class="num">—</td><td>—</td></tr>
+<tr id="rrg-08"><td>RRG-08</td><td>Oregon Department of Human Services â€” Public Records Unit</td><td></td><td>Quarterly reports</td><td>2026-10-26</td><td>2026-10-26</td><td>Acknowledged/responded</td><td class="num">—</td><td>—</td></tr>
+<tr id="rrg-09"><td>RRG-09</td><td>Oregon Department of Human Services â€” Public Records Unit</td><td></td><td>Program statistics</td><td>2026-10-26</td><td>2026-10-26</td><td>Acknowledged/responded</td><td class="num">—</td><td>—</td></tr>
+<tr id="rrg-10"><td>RRG-10</td><td>Lane County Clerk</td><td><a href="requests/lane-county-clerk-26-974.html">26-974</a></td><td>Program statistics</td><td>2026-10-26</td><td>2026-10-26</td><td>Fee estimate issued; petition to DA/AG filed</td><td class="num">$728.89</td><td>denied 2026-11-02</td></tr>
+<tr id="rrg-11"><td>RRG-11</td><td>Oregon Department of Human Services â€” Public Records Unit</td><td></td><td>Program statistics</td><td>2026-10-26</td><td>—</td><td>Sent — awaiting response</td><td class="num">—</td><td>—</td></tr>
+<tr id="rrg-12"><td>RRG-12</td><td>City of Eugene</td><td></td><td>Check register / vendor payments</td><td>2026-10-26</td><td>—</td><td>Fee estimate issued</td><td class="num">—</td><td>pending</td></tr>
+<tr id="rrg-13"><td>RRG-13</td><td>City of Eugene</td><td><a href="requests/eugene-prr-2026-896.html">PRR-2026-896</a></td><td>Employee payroll register</td><td>2026-10-26</td><td>2026-10-26</td><td>Produced</td><td class="num">—</td><td>moot</td></tr>
+<tr id="rrg-14"><td>RRG-14</td><td>City of Springfield</td><td></td><td>Check register / vendor payments</td><td>2026-10-26</td><td>—</td><td>petition to DA/AG filed</td><td class="num">—</td><td>—</td></tr>
+<tr id="rrg-15"><td>RRG-15</td><td>City of Springfield</td><td></td><td>Employee payroll register</td><td>2026-10-26</td><td>—</td><td>petition to DA/AG filed</td><td class="num">—</td><td>—</td></tr>
+<tr id="rrg-16"><td>RRG-16</td><td>Lane County</td><td><a href="requests/lane-county-26-968.html">26-968</a></td><td>Check register / vendor payments</td><td>2026-10-26</td><td>2026-10-30</td><td>Produced</td><td class="num">—</td><td>—</td></tr>
+<tr id="rrg-17"><td>RRG-17</td><td>Lane County</td><td><a href="requests/lane-county-26-971.html">26-971</a></td><td>Employee payroll register</td><td>2026-10-26</td><td>2026-10-26</td><td>Produced; petition to DA/AG filed</td><td class="num">$186.48</td><td>denied 2026-11-02</td></tr>
+<tr id="rrg-18"><td>RRG-18</td><td>Oregon Department of Human Services â€” Public Records Unit</td><td></td><td>Check register / vendor payments</td><td>2026-10-26</td><td>2026-10-26</td><td>Acknowledged/responded</td><td class="num">—</td><td>—</td></tr>
+<tr id="rrg-19"><td>RRG-19</td><td>Oregon Department of Human Services â€” Public Records Unit</td><td></td><td>Employee payroll register</td><td>2026-10-26</td><td>2026-10-26</td><td>Acknowledged/responded</td><td class="num">—</td><td>—</td></tr>
+<tr id="rrg-20"><td>RRG-20</td><td>Oregon Government Ethics Commission</td><td></td><td>Program statistics</td><td>2026-10-26</td><td>2026-10-26</td><td>Acknowledged/responded</td><td class="num">—</td><td>—</td></tr>
+<tr id="rrg-21"><td>RRG-21</td><td>Lane County Clerk</td><td><a href="requests/lane-county-clerk-26-975.html">26-975</a></td><td>Voter-registration record review (deceased registrant)</td><td>2026-10-26</td><td>2026-10-26</td><td>Fee estimate issued; petition to DA/AG filed</td><td class="num">$92.22</td><td>denied 2026-11-12</td></tr>
+<tr id="rrg-22"><td>RRG-22</td><td>Lane County</td><td></td><td>Jail census + bookings/releases</td><td>2026-11-03</td><td>2026-11-04</td><td>Produced</td><td class="num">—</td><td>—</td></tr>
+<tr id="rrg-23"><td>RRG-23</td><td>City of Eugene</td><td><a href="requests/eugene-prr-2026-926.html">PRR-2026-926</a></td><td>Check register / vendor payments</td><td>2026-11-03</td><td>2026-11-04</td><td>Produced</td><td class="num">$2,217.60</td><td>moot</td></tr>
+<tr id="rrg-24"><td>RRG-24</td><td>Oregon Department of Human Services â€” Public Records Unit</td><td></td><td>Vendor payments (FY2024–FY2025 + FYTD)</td><td>2026-11-04</td><td>2026-11-05</td><td>Redirected — submit-via-webform boilerplate, no ask; holding per wave-1 precedent, ODHS chann; petition to DA/AG filed</td><td class="num">—</td><td>—</td></tr>
+<tr id="rrg-25"><td>RRG-25</td><td>Oregon Government Ethics Commission</td><td></td><td>Vendor payments (FY2024–FY2025 + FYTD)</td><td>2026-11-04</td><td>—</td><td>Nonresponse past ORS 192.324 ack window — logged</td><td class="num">—</td><td>—</td></tr>
+<tr id="rrg-26"><td>RRG-26</td><td>Accountancy State Board</td><td></td><td>Vendor payments (FY2024–FY2025 + FYTD)</td><td>2026-11-04</td><td>—</td><td>Nonresponse past ORS 192.324 ack window — logged</td><td class="num">—</td><td>—</td></tr>
+<tr id="rrg-27"><td>RRG-27</td><td>Agriculture</td><td></td><td>Vendor payments (FY2024–FY2025 + FYTD)</td><td>2026-11-04</td><td>—</td><td>Nonresponse past ORS 192.324 ack window — DA/AG petition filed</td><td class="num">—</td><td>—</td></tr>
+<tr id="rrg-28"><td>RRG-28</td><td>Appraiser Certification &amp; Licensure Board</td><td></td><td>Vendor payments (FY2024–FY2025 + FYTD)</td><td>2026-11-04</td><td>—</td><td>Nonresponse past ORS 192.324 ack window — logged</td><td class="num">—</td><td>—</td></tr>
+<tr id="rrg-29"><td>RRG-29</td><td>Business Oregon</td><td></td><td>Vendor payments (FY2024–FY2025 + FYTD)</td><td>2026-11-04</td><td>—</td><td>Nonresponse past ORS 192.324 ack window — DA/AG petition filed</td><td class="num">—</td><td>—</td></tr>
+<tr id="rrg-30"><td>RRG-30</td><td>Chiropractic Examiners Board</td><td></td><td>Vendor payments (FY2024–FY2025 + FYTD)</td><td>2026-11-04</td><td>2026-11-10</td><td>Produced</td><td class="num">—</td><td>—</td></tr>
+<tr id="rrg-31"><td>RRG-31</td><td>Consumer and Business Services</td><td></td><td>Vendor payments (FY2024–FY2025 + FYTD)</td><td>2026-11-04</td><td>—</td><td>Nonresponse past ORS 192.324 ack window — DA/AG petition filed</td><td class="num">—</td><td>—</td></tr>
+<tr id="rrg-32"><td>RRG-32</td><td>Department of State Lands</td><td></td><td>Vendor payments (FY2024–FY2025 + FYTD)</td><td>2026-11-04</td><td>2026-11-06</td><td>Bounced</td><td class="num">—</td><td>—</td></tr>
+<tr id="rrg-33"><td>RRG-33</td><td>Education</td><td></td><td>Vendor payments (FY2024–FY2025 + FYTD)</td><td>2026-11-04</td><td>—</td><td>Nonresponse past ORS 192.324 ack window — DA/AG petition filed</td><td class="num">—</td><td>—</td></tr>
+<tr id="rrg-34"><td>RRG-34</td><td>Energy</td><td></td><td>Vendor payments (FY2024–FY2025 + FYTD)</td><td>2026-11-04</td><td>—</td><td>Nonresponse past ORS 192.324 ack window — logged</td><td class="num">—</td><td>—</td></tr>
+<tr id="rrg-35"><td>RRG-35</td><td>Environmental Quality</td><td></td><td>Vendor payments (FY2024–FY2025 + FYTD)</td><td>2026-11-04</td><td>2026-11-06</td><td>Produced</td><td class="num">—</td><td>moot</td></tr>
+<tr id="rrg-36"><td>RRG-36</td><td>Fish and Wildlife</td><td></td><td>Vendor payments (FY2024–FY2025 + FYTD)</td><td>2026-11-04</td><td>—</td><td>Nonresponse past ORS 192.324 ack window — DA/AG petition filed</td><td class="num">—</td><td>—</td></tr>
+<tr id="rrg-37"><td>RRG-37</td><td>Forestry Department</td><td></td><td>Vendor payments (FY2024–FY2025 + FYTD)</td><td>2026-11-04</td><td>—</td><td>Nonresponse past ORS 192.324 ack window — DA/AG petition filed</td><td class="num">—</td><td>—</td></tr>
+<tr id="rrg-38"><td>RRG-38</td><td>Health Authority</td><td></td><td>Vendor payments (FY2024–FY2025 + FYTD)</td><td>2026-11-04</td><td>2026-11-06</td><td>Responded — OHA-010-010 policy identity demand (org name + submitting individual + phone to </td><td class="num">—</td><td>—</td></tr>
+<tr id="rrg-39"><td>RRG-39</td><td>Higher Education Coordinating Commission</td><td></td><td>Vendor payments (FY2024–FY2025 + FYTD)</td><td>2026-11-04</td><td>2026-11-05</td><td>Responded (questionnaire) — Grisham asks fee-waiver info on R000057-112026 — ability to disseminate, benefit</td><td class="num">—</td><td>pending</td></tr>
+<tr id="rrg-40"><td>RRG-40</td><td>Housing and Community Services</td><td></td><td>Vendor payments (FY2024–FY2025 + FYTD)</td><td>2026-11-04</td><td>2026-11-05</td><td>Redirected — GovQA Records Access Center boilerplate, no legal claim; email-channel reply dra</td><td class="num">—</td><td>—</td></tr>
+<tr id="rrg-41"><td>RRG-41</td><td>Human Services</td><td></td><td>Vendor payments (FY2024–FY2025 + FYTD)</td><td>2026-11-04</td><td>2026-11-05</td><td>Redirected — submit-via-webform boilerplate, no ask; holding per wave-1 precedent, ODHS chann; petition to DA/AG filed</td><td class="num">—</td><td>—</td></tr>
+<tr id="rrg-42"><td>RRG-42</td><td>Labor and Industries, Bureau of</td><td></td><td>Vendor payments (FY2024–FY2025 + FYTD)</td><td>2026-11-04</td><td>—</td><td>Nonresponse past ORS 192.324 ack window — DA/AG petition filed</td><td class="num">—</td><td>—</td></tr>
+<tr id="rrg-43"><td>RRG-43</td><td>Liquor &amp; Cannabis Commission, Oregon</td><td></td><td>Vendor payments (FY2024–FY2025 + FYTD)</td><td>2026-11-04</td><td>2026-11-10</td><td>Acknowledged — tracking PRR-2385 assigned; original ask recovered from spam; portal suggested —</td><td class="num">—</td><td>—</td></tr>
+<tr id="rrg-44"><td>RRG-44</td><td>Military Department</td><td></td><td>Vendor payments (FY2024–FY2025 + FYTD)</td><td>2026-11-04</td><td>—</td><td>No response on file (send-desk delivery unverified)</td><td class="num">—</td><td>—</td></tr>
+<tr id="rrg-45"><td>RRG-45</td><td>Nursing Board</td><td></td><td>Vendor payments (FY2024–FY2025 + FYTD)</td><td>2026-11-04</td><td>—</td><td>Nonresponse past ORS 192.324 ack window — logged</td><td class="num">—</td><td>—</td></tr>
+<tr id="rrg-46"><td>RRG-46</td><td>Office of Homeland Security</td><td></td><td>Vendor payments (FY2024–FY2025 + FYTD)</td><td>2026-11-04</td><td>—</td><td>Nonresponse past ORS 192.324 ack window — logged</td><td class="num">—</td><td>—</td></tr>
+<tr id="rrg-47"><td>RRG-47</td><td>Oregon Clover Seed Commission</td><td></td><td>Vendor payments (FY2024–FY2025 + FYTD)</td><td>2026-11-04</td><td>2026-11-06</td><td>Bounced; bounced — re-route pending</td><td class="num">—</td><td>—</td></tr>
+<tr id="rrg-48"><td>RRG-48</td><td>Oregon Commission for the Blind</td><td></td><td>Vendor payments (FY2024–FY2025 + FYTD)</td><td>2026-11-04</td><td>2026-11-05</td><td>Produced</td><td class="num">$325</td><td>denied</td></tr>
+<tr id="rrg-49"><td>RRG-49</td><td>Oregon Department of Corrections</td><td></td><td>Vendor payments (FY2024–FY2025 + FYTD)</td><td>2026-11-04</td><td>2026-11-05</td><td>Portal redirect — hard refusal — do not accept requests via email, GovQA only; email-channel dropp; petition to DA/AG filed</td><td class="num">—</td><td>—</td></tr>
+<tr id="rrg-50"><td>RRG-50</td><td>Oregon Government Ethics Commission</td><td></td><td>Vendor payments (FY2024–FY2025 + FYTD)</td><td>2026-11-04</td><td>—</td><td>Nonresponse past ORS 192.324 ack window — logged</td><td class="num">—</td><td>—</td></tr>
+<tr id="rrg-51"><td>RRG-51</td><td>Oregon Medical Board</td><td></td><td>Vendor payments (FY2024–FY2025 + FYTD)</td><td>2026-11-04</td><td>—</td><td>Nonresponse past ORS 192.324 ack window — logged</td><td class="num">—</td><td>—</td></tr>
+<tr id="rrg-52"><td>RRG-52</td><td>Oregon Parks and Recreation</td><td></td><td>Vendor payments (FY2024–FY2025 + FYTD)</td><td>2026-11-04</td><td>2026-11-04</td><td>Portal redirect — repeats NextRequest/mail-only after freshdesk had already ticketed our email rep; petition to DA/AG filed</td><td class="num">—</td><td>—</td></tr>
+<tr id="rrg-53"><td>RRG-53</td><td>Oregon State Fire Marshal</td><td></td><td>Vendor payments (FY2024–FY2025 + FYTD)</td><td>2026-11-04</td><td>2026-11-05</td><td>Fee estimate issued</td><td class="num">—</td><td>granted</td></tr>
+<tr id="rrg-54"><td>RRG-54</td><td>Oregon State Police</td><td></td><td>Vendor payments (FY2024–FY2025 + FYTD)</td><td>2026-11-04</td><td>2026-11-06</td><td>Redirected — OSP web-form ask (forms.osp.oregon.gov), one-liner; email-channel reply sent 202</td><td class="num">—</td><td>—</td></tr>
+<tr id="rrg-55"><td>RRG-55</td><td>PERS</td><td></td><td>Vendor payments (FY2024–FY2025 + FYTD)</td><td>2026-11-04</td><td>2026-11-05</td><td>Fee estimate issued</td><td class="num">—</td><td>denied</td></tr>
+<tr id="rrg-56"><td>RRG-56</td><td>Public Defense Services Commission</td><td></td><td>Vendor payments (FY2024–FY2025 + FYTD)</td><td>2026-11-04</td><td>—</td><td>Nonresponse past ORS 192.324 ack window — logged</td><td class="num">—</td><td>—</td></tr>
+<tr id="rrg-57"><td>RRG-57</td><td>Real Estate Agency</td><td></td><td>Vendor payments (FY2024–FY2025 + FYTD)</td><td>2026-11-04</td><td>—</td><td>Nonresponse past ORS 192.324 ack window — logged</td><td class="num">—</td><td>—</td></tr>
+<tr id="rrg-58"><td>RRG-58</td><td>Revenue</td><td></td><td>Vendor payments (FY2024–FY2025 + FYTD)</td><td>2026-11-04</td><td>—</td><td>Nonresponse past ORS 192.324 ack window — DA/AG petition filed</td><td class="num">—</td><td>—</td></tr>
+<tr id="rrg-59"><td>RRG-59</td><td>State Board Pharmacy</td><td></td><td>Vendor payments (FY2024–FY2025 + FYTD)</td><td>2026-11-04</td><td>2026-11-10</td><td>Acknowledged — delayed — additional time required, follow-up promised by EOD 12/01/2026; no reply needed</td><td class="num">—</td><td>—</td></tr>
+<tr id="rrg-60"><td>RRG-60</td><td>State Library of Oregon</td><td></td><td>Vendor payments (FY2024–FY2025 + FYTD)</td><td>2026-11-04</td><td>—</td><td>Nonresponse past ORS 192.324 ack window — logged</td><td class="num">—</td><td>—</td></tr>
+<tr id="rrg-61"><td>RRG-61</td><td>Travel Information Council</td><td></td><td>Vendor payments (FY2024–FY2025 + FYTD)</td><td>2026-11-04</td><td>—</td><td>Nonresponse past ORS 192.324 ack window — logged</td><td class="num">—</td><td>—</td></tr>
+<tr id="rrg-62"><td>RRG-62</td><td>Travel Oregon</td><td></td><td>Vendor payments (FY2024–FY2025 + FYTD)</td><td>2026-11-04</td><td>—</td><td>Nonresponse past ORS 192.324 ack window — logged</td><td class="num">—</td><td>—</td></tr>
+<tr id="rrg-63"><td>RRG-63</td><td>Veterans Affairs Department</td><td></td><td>Vendor payments (FY2024–FY2025 + FYTD)</td><td>2026-11-04</td><td>2026-11-13</td><td>Fee estimate issued</td><td class="num">$115</td><td>pending</td></tr>
+<tr id="rrg-64"><td>RRG-64</td><td>Water Resources Department</td><td></td><td>Vendor payments (FY2024–FY2025 + FYTD)</td><td>2026-11-04</td><td>2026-11-05</td><td>Produced</td><td class="num">—</td><td>moot</td></tr>
+<tr id="rrg-65"><td>RRG-65</td><td>Oregon Clover Seed Commission</td><td></td><td>Vendor payments (FY2024–FY2025 + FYTD)</td><td>2026-11-04</td><td>—</td><td>Nonresponse past ORS 192.324 ack window — logged</td><td class="num">—</td><td>—</td></tr>
+<tr id="rrg-66"><td>RRG-66</td><td>Department of State Lands</td><td></td><td>Vendor payments (FY2024–FY2025 + FYTD)</td><td>2026-11-04</td><td>2026-11-06</td><td>Produced</td><td class="num">—</td><td>—</td></tr>
+<tr id="rrg-67"><td>RRG-67</td><td>Administrative Hearings, Office of</td><td></td><td>Vendor payments (FY2024–FY2025 + FYTD)</td><td>2026-11-05</td><td>—</td><td>Nonresponse past ORS 192.324 ack window — logged</td><td class="num">—</td><td>—</td></tr>
+<tr id="rrg-68"><td>RRG-68</td><td>Athletic Trainers, Board of</td><td></td><td>Vendor payments (FY2024–FY2025 + FYTD)</td><td>2026-11-05</td><td>2026-11-06</td><td>Responded — Windham asks org registration state — unincorporated-association answer sent 202</td><td class="num">—</td><td>—</td></tr>
+<tr id="rrg-69"><td>RRG-69</td><td>Columbia River Gorge Commission</td><td></td><td>Vendor payments (FY2024–FY2025 + FYTD)</td><td>2026-11-05</td><td>2026-11-13</td><td>Acknowledged — delayed — staffing shortage; completion ETA moved 2026-11-30 -&gt; 2026-12-10</td><td class="num">—</td><td>—</td></tr>
+<tr id="rrg-70"><td>RRG-70</td><td>Construction Contractors Board</td><td></td><td>Vendor payments (FY2024–FY2025 + FYTD)</td><td>2026-11-05</td><td>2026-11-09</td><td>Fee estimate issued</td><td class="num">$75</td><td>pending</td></tr>
+<tr id="rrg-71"><td>RRG-71</td><td>Criminal Justice Commission</td><td></td><td>Vendor payments (FY2024–FY2025 + FYTD)</td><td>2026-11-05</td><td>2026-11-06</td><td>Acknowledged — Pairan — request received 11-17 via intake refiling of original 11-05 email; sta</td><td class="num">—</td><td>—</td></tr>
+<tr id="rrg-72"><td>RRG-72</td><td>Dentistry, Oregon Board of</td><td></td><td>Vendor payments (FY2024–FY2025 + FYTD)</td><td>2026-11-05</td><td>—</td><td>Nonresponse past ORS 192.324 ack window — logged</td><td class="num">—</td><td>—</td></tr>
+<tr id="rrg-73"><td>RRG-73</td><td>Early Learning &amp; Care, Department of</td><td></td><td>Vendor payments (FY2024–FY2025 + FYTD)</td><td>2026-11-05</td><td>2026-11-09</td><td>Produced</td><td class="num">—</td><td>—</td></tr>
+<tr id="rrg-74"><td>RRG-74</td><td>Electrologist &amp; Body Art Practitioners, Board of</td><td></td><td>Vendor payments (FY2024–FY2025 + FYTD)</td><td>2026-11-05</td><td>2026-11-06</td><td>No responsive records (per desk) — various requests you continue to submit)</td><td class="num">—</td><td>—</td></tr>
+<tr id="rrg-75"><td>RRG-75</td><td>Emergency Management, Department of - OEM</td><td></td><td>Vendor payments (FY2024–FY2025 + FYTD)</td><td>2026-11-05</td><td>—</td><td>Nonresponse past ORS 192.324 ack window — DA/AG petition filed</td><td class="num">—</td><td>—</td></tr>
+<tr id="rrg-76"><td>RRG-76</td><td>Engineering &amp; Land Surveying, State Board of Examiners for</td><td></td><td>Vendor payments (FY2024–FY2025 + FYTD)</td><td>2026-11-05</td><td>2026-11-06</td><td>Produced</td><td class="num">—</td><td>—</td></tr>
+<tr id="rrg-77"><td>RRG-77</td><td>Environmental Health Registration Board</td><td></td><td>Vendor payments (FY2024–FY2025 + FYTD)</td><td>2026-11-05</td><td>2026-11-06</td><td>No responsive records (per desk) — OHA PR one-liner; custodian status unstated</td><td class="num">—</td><td>—</td></tr>
+<tr id="rrg-78"><td>RRG-78</td><td>Geology &amp; Mineral Industries, State Department of</td><td></td><td>Vendor payments (FY2024–FY2025 + FYTD)</td><td>2026-11-05</td><td>2026-11-06</td><td>Produced</td><td class="num">—</td><td>—</td></tr>
+<tr id="rrg-79"><td>RRG-79</td><td>Health Evidence Review Commission</td><td></td><td>Vendor payments (FY2024–FY2025 + FYTD)</td><td>2026-11-05</td><td>2026-11-06</td><td>No responsive records (per desk) — OHA PR one-liner; custodian status unstated</td><td class="num">—</td><td>—</td></tr>
+<tr id="rrg-80"><td>RRG-80</td><td>Health Licensing Office</td><td></td><td>Vendor payments (FY2024–FY2025 + FYTD)</td><td>2026-11-05</td><td>2026-11-06</td><td>No responsive records (per desk) — OHA PR one-liner; custodian status unstated</td><td class="num">—</td><td>—</td></tr>
+<tr id="rrg-81"><td>RRG-81</td><td>Hearing Aids, Advisory Council on</td><td></td><td>Vendor payments (FY2024–FY2025 + FYTD)</td><td>2026-11-05</td><td>2026-11-06</td><td>No responsive records (per desk) — OHA PR one-liner; custodian status unstated</td><td class="num">—</td><td>—</td></tr>
+<tr id="rrg-82"><td>RRG-82</td><td>Land Conservation &amp; Development Department</td><td></td><td>Vendor payments (FY2024–FY2025 + FYTD)</td><td>2026-11-05</td><td>—</td><td>Nonresponse past ORS 192.324 ack window — logged</td><td class="num">—</td><td>—</td></tr>
+<tr id="rrg-83"><td>RRG-83</td><td>Land Use Board of Appeals</td><td></td><td>Vendor payments (FY2024–FY2025 + FYTD)</td><td>2026-11-05</td><td>2026-11-12</td><td>Acknowledged/responded</td><td class="num">—</td><td>—</td></tr>
+<tr id="rrg-84"><td>RRG-84</td><td>Landscape Contractors Board</td><td></td><td>Vendor payments (FY2024–FY2025 + FYTD)</td><td>2026-11-05</td><td>2026-11-10</td><td>Produced</td><td class="num">—</td><td>moot</td></tr>
+<tr id="rrg-85"><td>RRG-85</td><td>Mortuary &amp; Cemetery Board</td><td></td><td>Vendor payments (FY2024–FY2025 + FYTD)</td><td>2026-11-05</td><td>—</td><td>Nonresponse past ORS 192.324 ack window — logged</td><td class="num">—</td><td>—</td></tr>
+<tr id="rrg-86"><td>RRG-86</td><td>Oregon Arts Commission</td><td></td><td>Vendor payments (FY2024–FY2025 + FYTD)</td><td>2026-11-05</td><td>—</td><td>Nonresponse past ORS 192.324 ack window — logged</td><td class="num">—</td><td>—</td></tr>
+<tr id="rrg-87"><td>RRG-87</td><td>Oregon Educators Benefit Board</td><td></td><td>Vendor payments (FY2024–FY2025 + FYTD)</td><td>2026-11-05</td><td>2026-11-06</td><td>No responsive records (per desk) — OHA PR one-liner; custodian status unstated</td><td class="num">—</td><td>—</td></tr>
+<tr id="rrg-88"><td>RRG-88</td><td>Parole &amp; Post-Prison Supervision, Board of</td><td></td><td>Vendor payments (FY2024–FY2025 + FYTD)</td><td>2026-11-05</td><td>2026-11-05</td><td>Acknowledged/responded</td><td class="num">—</td><td>—</td></tr>
+<tr id="rrg-89"><td>RRG-89</td><td>Patient Safety Commission</td><td></td><td>Vendor payments (FY2024–FY2025 + FYTD)</td><td>2026-11-05</td><td>—</td><td>Nonresponse past ORS 192.324 ack window — logged</td><td class="num">—</td><td>—</td></tr>
+<tr id="rrg-90"><td>RRG-90</td><td>Psychiatric Security Review Board</td><td></td><td>Vendor payments (FY2024–FY2025 + FYTD)</td><td>2026-11-05</td><td>—</td><td>Nonresponse past ORS 192.324 ack window — logged</td><td class="num">—</td><td>—</td></tr>
+<tr id="rrg-91"><td>RRG-91</td><td>Public Employees Benefit Board</td><td></td><td>Vendor payments (FY2024–FY2025 + FYTD)</td><td>2026-11-05</td><td>2026-11-06</td><td>No responsive records (per desk) — OHA PR one-liner; custodian status unstated</td><td class="num">—</td><td>—</td></tr>
+<tr id="rrg-92"><td>RRG-92</td><td>Public Health Division - OHA</td><td></td><td>Vendor payments (FY2024–FY2025 + FYTD)</td><td>2026-11-05</td><td>2026-11-06</td><td>No responsive records (per desk) — OHA PR one-liner; custodian status unstated</td><td class="num">—</td><td>—</td></tr>
+<tr id="rrg-93"><td>RRG-93</td><td>Public Safety Standards &amp; Training, Department of</td><td></td><td>Vendor payments (FY2024–FY2025 + FYTD)</td><td>2026-11-05</td><td>2026-11-09</td><td>Portal redirect — hard refusal — all requests must go through GovQA portal; email-channel dropped ; petition to DA/AG filed</td><td class="num">—</td><td>—</td></tr>
+<tr id="rrg-94"><td>RRG-94</td><td>Public Utility Commission</td><td></td><td>Vendor payments (FY2024–FY2025 + FYTD)</td><td>2026-11-05</td><td>2026-11-18</td><td>Fee estimate issued</td><td class="num">$132</td><td>pending</td></tr>
+<tr id="rrg-95"><td>RRG-95</td><td>Speech-Language Pathology &amp; Audiology, State Board of Examiners for</td><td></td><td>Vendor payments (FY2024–FY2025 + FYTD)</td><td>2026-11-05</td><td>—</td><td>Nonresponse past ORS 192.324 ack window — logged</td><td class="num">—</td><td>—</td></tr>
+<tr id="rrg-96"><td>RRG-96</td><td>Watershed Enhancement Board</td><td></td><td>Vendor payments (FY2024–FY2025 + FYTD)</td><td>2026-11-05</td><td>2026-11-06</td><td>Fee estimate issued</td><td class="num">—</td><td>—</td></tr>
+<tr id="rrg-97"><td>RRG-97</td><td>Workers’ Compensation Board - DCBS</td><td></td><td>Vendor payments (FY2024–FY2025 + FYTD)</td><td>2026-11-05</td><td>—</td><td>Nonresponse past ORS 192.324 ack window — logged</td><td class="num">—</td><td>—</td></tr>
+<tr id="rrg-98"><td>RRG-98</td><td>Youth Authority, Oregon</td><td></td><td>Vendor payments (FY2024–FY2025 + FYTD)</td><td>2026-11-05</td><td>—</td><td>Nonresponse past ORS 192.324 ack window — logged</td><td class="num">—</td><td>—</td></tr>
+<tr id="rrg-99"><td>RRG-99</td><td>ATF</td><td></td><td>Vendor payments (FOIA)</td><td>2026-11-05</td><td>2026-11-10</td><td>Misrouted — OIP referral FOIA-2027-00505 — wave-3 ask landed at OIP, records are ATF; ATF no</td><td class="num">—</td><td>—</td></tr>
+<tr id="rrg-100"><td>RRG-100</td><td>Federal Bureau of Prisons</td><td></td><td>Vendor payments (FOIA)</td><td>2026-11-05</td><td>2026-11-12</td><td>Acknowledged — FOIA 2027-01194 assigned; complex track ~9mo; narrowing/alt-timeframe offered; f</td><td class="num">—</td><td>—</td></tr>
+<tr id="rrg-101"><td>RRG-101</td><td>Bureau of Reclamation</td><td></td><td>Vendor payments (FOIA)</td><td>2026-11-05</td><td>—</td><td>Sent — awaiting response</td><td class="num">—</td><td>—</td></tr>
+<tr id="rrg-102"><td>RRG-102</td><td>DEA</td><td></td><td>Vendor payments (FOIA)</td><td>2026-11-05</td><td>2026-11-05</td><td>Misrouted — landed at DEA Registration Contact Center, Case 00594371 created — not a FOIA of</td><td class="num">—</td><td>—</td></tr>
+<tr id="rrg-103"><td>RRG-103</td><td>FBI</td><td></td><td>Vendor payments (FOIA)</td><td>2026-11-05</td><td>—</td><td>Sent — awaiting response</td><td class="num">—</td><td>—</td></tr>
+<tr id="rrg-104"><td>RRG-104</td><td>NOAA</td><td></td><td>Vendor payments (FOIA)</td><td>2026-11-05</td><td>2026-11-06</td><td>Fee estimate issued</td><td class="num">—</td><td>granted</td></tr>
+<tr id="rrg-105"><td>RRG-105</td><td>U.S. Army Corps of Engineers</td><td></td><td>Vendor payments (FOIA)</td><td>2026-11-05</td><td>—</td><td>Sent — awaiting response</td><td class="num">—</td><td>—</td></tr>
+<tr id="rrg-106"><td>RRG-106</td><td>U.S. Attorney</td><td></td><td>Vendor payments (FOIA)</td><td>2026-11-05</td><td>2026-11-10</td><td>Misrouted — OIP referral FOIA-2027-00506 — records are EOUSA/USAO-DOr; refiling via MRUFOIA.</td><td class="num">—</td><td>—</td></tr>
+<tr id="rrg-107"><td>RRG-107</td><td>U.S. Forest Service</td><td></td><td>Vendor payments (FOIA)</td><td>2026-11-05</td><td>2026-11-19</td><td>Acknowledged — tracking 2027-FS-WO-01409-F; received 2026-11-09; FIFO, 20wd + possible 10d ext;</td><td class="num">—</td><td>pending</td></tr>
+<tr id="rrg-108"><td>RRG-108</td><td>U.S. Marshals</td><td></td><td>Vendor payments (FOIA)</td><td>2026-11-05</td><td>—</td><td>Sent — awaiting response</td><td class="num">—</td><td>—</td></tr>
+<tr id="rrg-109"><td>RRG-109</td><td>Dept of Veterans Affairs</td><td></td><td>Vendor payments (FOIA)</td><td>2026-11-05</td><td>2026-11-20</td><td>Responded (questionnaire) — FOIA officer B. Myles holds request pending requester-role clarification — Educa</td><td class="num">—</td><td>—</td></tr>
+<tr id="rrg-110"><td>RRG-110</td><td>Advocacy Commissions Office, Oregon</td><td></td><td>Vendor payments (FY2024–FY2025 + FYTD)</td><td>2026-11-05</td><td>—</td><td>Nonresponse past ORS 192.324 ack window — logged</td><td class="num">—</td><td>—</td></tr>
+<tr id="rrg-111"><td>RRG-111</td><td>Asian &amp; Pacific Islander Affairs, Commission on</td><td></td><td>Vendor payments (FY2024–FY2025 + FYTD)</td><td>2026-11-05</td><td>—</td><td>Nonresponse past ORS 192.324 ack window — logged</td><td class="num">—</td><td>—</td></tr>
+<tr id="rrg-112"><td>RRG-112</td><td>Audits Division - SOS</td><td></td><td>Vendor payments (FY2024–FY2025 + FYTD)</td><td>2026-11-05</td><td>—</td><td>Nonresponse past ORS 192.324 ack window — logged</td><td class="num">—</td><td>—</td></tr>
+<tr id="rrg-113"><td>RRG-113</td><td>Black Affairs, Commission on</td><td></td><td>Vendor payments (FY2024–FY2025 + FYTD)</td><td>2026-11-05</td><td>—</td><td>Nonresponse past ORS 192.324 ack window — logged</td><td class="num">—</td><td>—</td></tr>
+<tr id="rrg-114"><td>RRG-114</td><td>Building Codes Division - DCBS</td><td></td><td>Vendor payments (FY2024–FY2025 + FYTD)</td><td>2026-11-05</td><td>—</td><td>Nonresponse past ORS 192.324 ack window — DA/AG petition filed</td><td class="num">—</td><td>—</td></tr>
+<tr id="rrg-115"><td>RRG-115</td><td>Cosmetology, Board of</td><td></td><td>Vendor payments (FY2024–FY2025 + FYTD)</td><td>2026-11-05</td><td>2026-11-06</td><td>Bounced; bounced — re-route pending</td><td class="num">—</td><td>—</td></tr>
+<tr id="rrg-116"><td>RRG-116</td><td>Denture Technology, Board of</td><td></td><td>Vendor payments (FY2024–FY2025 + FYTD)</td><td>2026-11-05</td><td>2026-11-06</td><td>Bounced; bounced — re-route pending</td><td class="num">—</td><td>—</td></tr>
+<tr id="rrg-117"><td>RRG-117</td><td>Dieticians, Board of Licensed</td><td></td><td>Vendor payments (FY2024–FY2025 + FYTD)</td><td>2026-11-05</td><td>2026-11-06</td><td>Bounced; bounced — re-route pending</td><td class="num">—</td><td>—</td></tr>
+<tr id="rrg-118"><td>RRG-118</td><td>Elections Division - SOS</td><td></td><td>Vendor payments (FY2024–FY2025 + FYTD)</td><td>2026-11-05</td><td>—</td><td>Nonresponse past ORS 192.324 ack window — logged</td><td class="num">—</td><td>—</td></tr>
+<tr id="rrg-119"><td>RRG-119</td><td>Employment Relations Board</td><td></td><td>Vendor payments (FY2024–FY2025 + FYTD)</td><td>2026-11-05</td><td>2026-11-17</td><td>Produced</td><td class="num">—</td><td>—</td></tr>
+<tr id="rrg-120"><td>RRG-120</td><td>Film &amp; Video Office, Oregon</td><td></td><td>Vendor payments (FY2024–FY2025 + FYTD)</td><td>2026-11-05</td><td>—</td><td>Produced</td><td class="num">—</td><td>—</td></tr>
+<tr id="rrg-121"><td>RRG-121</td><td>Financial Regulation Division - DCBS</td><td></td><td>Vendor payments (FY2024–FY2025 + FYTD)</td><td>2026-11-05</td><td>—</td><td>Nonresponse past ORS 192.324 ack window — logged</td><td class="num">—</td><td>—</td></tr>
+<tr id="rrg-122"><td>RRG-122</td><td>Geologist Examiners, State Board of</td><td></td><td>Vendor payments (FY2024–FY2025 + FYTD)</td><td>2026-11-05</td><td>2026-11-06</td><td>Produced</td><td class="num">—</td><td>moot</td></tr>
+<tr id="rrg-123"><td>RRG-123</td><td>Hispanic Affairs Commission</td><td></td><td>Vendor payments (FY2024–FY2025 + FYTD)</td><td>2026-11-05</td><td>—</td><td>Nonresponse past ORS 192.324 ack window — logged</td><td class="num">—</td><td>—</td></tr>
+<tr id="rrg-124"><td>RRG-124</td><td>Long-Term Care Ombudsman, Office of</td><td></td><td>Vendor payments (FY2024–FY2025 + FYTD)</td><td>2026-11-05</td><td>2026-11-06</td><td>Bounced; bounced — re-route pending</td><td class="num">—</td><td>—</td></tr>
+<tr id="rrg-125"><td>RRG-125</td><td>Lottery, Oregon State</td><td></td><td>Vendor payments (FY2024–FY2025 + FYTD)</td><td>2026-11-05</td><td>2026-11-06</td><td>Bounced; bounced — re-route pending</td><td class="num">—</td><td>—</td></tr>
+<tr id="rrg-126"><td>RRG-126</td><td>Marine Board, Oregon State</td><td></td><td>Vendor payments (FY2024–FY2025 + FYTD)</td><td>2026-11-05</td><td>—</td><td>Nonresponse past ORS 192.324 ack window — logged</td><td class="num">—</td><td>—</td></tr>
+<tr id="rrg-127"><td>RRG-127</td><td>Massage Therapists, Board of</td><td></td><td>Vendor payments (FY2024–FY2025 + FYTD)</td><td>2026-11-05</td><td>—</td><td>Nonresponse past ORS 192.324 ack window — logged</td><td class="num">—</td><td>—</td></tr>
+<tr id="rrg-128"><td>RRG-128</td><td>Medical Imaging, Board of</td><td></td><td>Vendor payments (FY2024–FY2025 + FYTD)</td><td>2026-11-05</td><td>—</td><td>Nonresponse past ORS 192.324 ack window — logged</td><td class="num">—</td><td>—</td></tr>
+<tr id="rrg-129"><td>RRG-129</td><td>Midwifery, Board Of Direct Entry</td><td></td><td>Vendor payments (FY2024–FY2025 + FYTD)</td><td>2026-11-05</td><td>2026-11-06</td><td>Bounced; bounced — re-route pending</td><td class="num">—</td><td>—</td></tr>
+<tr id="rrg-130"><td>RRG-130</td><td>Naturopathic Medicine, Board of</td><td></td><td>Vendor payments (FY2024–FY2025 + FYTD)</td><td>2026-11-05</td><td>2026-11-06</td><td>Bounced; bounced — re-route pending</td><td class="num">—</td><td>—</td></tr>
+<tr id="rrg-131"><td>RRG-131</td><td>Northwest Power &amp; Conservation Council</td><td></td><td>Vendor payments (FY2024–FY2025 + FYTD)</td><td>2026-11-05</td><td>—</td><td>Nonresponse past ORS 192.324 ack window — logged</td><td class="num">—</td><td>—</td></tr>
+<tr id="rrg-132"><td>RRG-132</td><td>Occupational Safety &amp; Health Division - DCBS</td><td></td><td>Vendor payments (FY2024–FY2025 + FYTD)</td><td>2026-11-05</td><td>—</td><td>No response on file (send-desk delivery unverified)</td><td class="num">—</td><td>—</td></tr>
+<tr id="rrg-133"><td>RRG-133</td><td>Occupational Therapy Licensing Board</td><td></td><td>Vendor payments (FY2024–FY2025 + FYTD)</td><td>2026-11-05</td><td>2026-11-06</td><td>Bounced; bounced — re-route pending</td><td class="num">—</td><td>—</td></tr>
+<tr id="rrg-134"><td>RRG-134</td><td>Respiratory Therapist &amp; Polysomnographic Technologist Licensing Board</td><td></td><td>Vendor payments (FY2024–FY2025 + FYTD)</td><td>2026-11-05</td><td>2026-11-06</td><td>Bounced; bounced — re-route pending</td><td class="num">—</td><td>—</td></tr>
+<tr id="rrg-135"><td>RRG-135</td><td>Social Workers, State Board of Licensed</td><td></td><td>Vendor payments (FY2024–FY2025 + FYTD)</td><td>2026-11-05</td><td>—</td><td>Nonresponse past ORS 192.324 ack window — logged</td><td class="num">—</td><td>—</td></tr>
+<tr id="rrg-136"><td>RRG-136</td><td>Tax Practitioners, Board of</td><td></td><td>Vendor payments (FY2024–FY2025 + FYTD)</td><td>2026-11-05</td><td>—</td><td>Nonresponse past ORS 192.324 ack window — logged</td><td class="num">—</td><td>—</td></tr>
+<tr id="rrg-137"><td>RRG-137</td><td>Teacher Standards &amp; Practices Commission</td><td></td><td>Vendor payments (FY2024–FY2025 + FYTD)</td><td>2026-11-05</td><td>2026-11-06</td><td>Bounced; bounced — re-route pending</td><td class="num">—</td><td>—</td></tr>
+<tr id="rrg-138"><td>RRG-138</td><td>Veterinary Medical Examining Board</td><td></td><td>Vendor payments (FY2024–FY2025 + FYTD)</td><td>2026-11-05</td><td>—</td><td>Nonresponse past ORS 192.324 ack window — logged</td><td class="num">—</td><td>—</td></tr>
+<tr id="rrg-139"><td>RRG-139</td><td>Wine Board, Oregon</td><td></td><td>Vendor payments (FY2024–FY2025 + FYTD)</td><td>2026-11-05</td><td>2026-11-06</td><td>Bounced; bounced — re-route pending</td><td class="num">—</td><td>—</td></tr>
+<tr id="rrg-140"><td>RRG-140</td><td>Women, Commission For</td><td></td><td>Vendor payments (FY2024–FY2025 + FYTD)</td><td>2026-11-05</td><td>—</td><td>Nonresponse past ORS 192.324 ack window — logged</td><td class="num">—</td><td>—</td></tr>
+<tr id="rrg-141"><td>RRG-141</td><td>Workforce and Talent Development Board</td><td></td><td>Vendor payments (FY2024–FY2025 + FYTD)</td><td>2026-11-05</td><td>—</td><td>Nonresponse past ORS 192.324 ack window — logged</td><td class="num">—</td><td>—</td></tr>
+<tr id="rrg-142"><td>RRG-142</td><td>U.S. Immigration &amp; Customs Enforcement</td><td></td><td>Vendor payments (FOIA)</td><td>2026-11-05</td><td>2026-11-05</td><td>Redirected — "ICE FOIA does not accept requests by email... will not be acknowledged or proce</td><td class="num">—</td><td>—</td></tr>
+<tr id="rrg-143"><td>RRG-143</td><td>OSHA</td><td></td><td>Vendor payments (FOIA)</td><td>2026-11-05</td><td>—</td><td>Sent — awaiting response</td><td class="num">—</td><td>—</td></tr>
+<tr id="rrg-144"><td>RRG-144</td><td>Transportation Security Administration</td><td></td><td>Vendor payments (FOIA)</td><td>2026-11-05</td><td>—</td><td>Sent — awaiting response</td><td class="num">—</td><td>—</td></tr>
+<tr id="rrg-145"><td>RRG-145</td><td>U.S. Coast Guard</td><td></td><td>Vendor payments (FOIA)</td><td>2026-11-05</td><td>2026-11-19</td><td>channel-reject: DHS regs eff 2026-01-22 — USCG no longer accepts emailed/mailed FOIA; foia</td><td class="num">—</td><td>—</td></tr>
+<tr id="rrg-146"><td>RRG-146</td><td>Eugene School District 4J</td><td></td><td>Technology inventory / SBITA schedule</td><td>2026-10-20</td><td>2026-11-06</td><td>Fee estimate issued</td><td class="num">$979.42</td><td>pending</td></tr>
+<tr id="rrg-147"><td>RRG-147</td><td>Eugene School District 4J</td><td></td><td>Salary surveys + payroll registers</td><td>2026-11-06</td><td>—</td><td>Sent — awaiting response</td><td class="num">—</td><td>pending</td></tr>
+<tr id="rrg-148"><td>RRG-148</td><td>Lane County Sheriff's Office</td><td></td><td>In-custody death records</td><td>2026-11-08</td><td>—</td><td>Nonresponse past ORS 192.324 ack window — DA/AG petition filed</td><td class="num">—</td><td>—</td></tr>
+<tr id="rrg-149"><td>RRG-149</td><td>Lane County</td><td></td><td>In-custody death records</td><td></td><td>—</td><td>Withdrawn (superseded by duplicate filing)</td><td class="num">—</td><td>—</td></tr>
+<tr id="rrg-150"><td>RRG-150</td><td>Lane County</td><td><a href="requests/lane-county-26-1042.html">26-1042</a></td><td>Contract documents</td><td>2026-11-12</td><td>2026-11-13</td><td>Produced</td><td class="num">—</td><td>—</td></tr>
+<tr id="rrg-151"><td>RRG-151</td><td>Lane County</td><td><a href="requests/lane-county-26-1032.html">26-1032</a></td><td>Contract documents</td><td>2026-11-10</td><td>2026-11-10</td><td>Produced</td><td class="num">—</td><td>—</td></tr>
+<tr id="rrg-152"><td>RRG-152</td><td>Lane County</td><td><a href="requests/lane-county-26-1055.html">26-1055</a></td><td>ESS Navigation Center procurement file</td><td>2026-11-16</td><td>2026-11-16</td><td>Channel-switch letter</td><td class="num">—</td><td>—</td></tr>
+<tr id="rrg-153"><td>RRG-153</td><td>City of Eugene</td><td><a href="requests/eugene-prr-2026-948.html">PRR-2026-948</a></td><td>Millrace diversion dam records</td><td>2026-11-13</td><td>2026-11-13</td><td>Acknowledged</td><td class="num">—</td><td>—</td></tr>
+<tr id="rrg-154"><td>RRG-154</td><td>Eugene Water &amp; Electric Board</td><td></td><td>Millrace diversion dam records</td><td>2026-11-13</td><td>2026-11-17</td><td>Clarification received — EWEB (Kelley, Record Retention) disclaims EVER owning Millrace Canal/Diversion D</td><td class="num">—</td><td>pending</td></tr>
+<tr id="rrg-155"><td>RRG-155</td><td>Water Resources Department</td><td></td><td>Millrace diversion dam records</td><td>2026-11-13</td><td>2026-11-16</td><td>No responsive records (per desk) — OWRD dam-safety confirms low-head dams NOT state-regulated — no inventory/file; </td><td class="num">—</td><td>—</td></tr>
+<tr id="rrg-156"><td>RRG-156</td><td>Eugene Police Department</td><td></td><td>EPD copper-theft case file</td><td>2026-11-16</td><td>—</td><td>Sent — awaiting response</td><td class="num">—</td><td>—</td></tr>
+<tr id="rrg-157"><td>RRG-157</td><td>Eugene Police Department</td><td></td><td>CLCC 911 carrier outage records</td><td>2026-11-17</td><td>—</td><td>Sent — awaiting response</td><td class="num">—</td><td>—</td></tr>
+<tr id="rrg-158"><td>RRG-158</td><td>Federal Communications Commission</td><td></td><td>FCC outage filings</td><td>2026-11-18</td><td>—</td><td>Sent — awaiting response</td><td class="num">—</td><td>—</td></tr>
+<tr id="rrg-159"><td>RRG-159</td><td>Eugene Water &amp; Electric Board</td><td></td><td>EWEB storm outage records</td><td>2026-11-19</td><td>2026-11-20</td><td>Acknowledged — receipt confirmed by M. Conley, Enterprise Risk Management — processing begun, w</td><td class="num">—</td><td>—</td></tr>
+<tr id="rrg-160"><td>RRG-160</td><td>Health Authority</td><td></td><td>OHA ADHD claims aggregates</td><td>2026-11-19</td><td>—</td><td>Sent — awaiting response</td><td class="num">—</td><td>—</td></tr>
+<tr id="rrg-161"><td>RRG-161</td><td>Health Authority</td><td></td><td>OHA BHRN Lane County grant detail</td><td>2026-11-19</td><td>—</td><td>Sent — awaiting response</td><td class="num">—</td><td>—</td></tr>
+<tr id="rrg-162"><td>RRG-162</td><td>Health Authority</td><td></td><td>OHA BH provider enrollment</td><td>2026-11-19</td><td>—</td><td>Sent — awaiting response</td><td class="num">—</td><td>—</td></tr>
+<tr id="rrg-163"><td>RRG-163</td><td>Eugene School District 4J</td><td></td><td>4J Medicaid/SPED claiming</td><td></td><td>—</td><td>Drafted — not yet sent</td><td class="num">—</td><td>—</td></tr>
+<tr id="rrg-164"><td>RRG-164</td><td>Administrative Services, Department of</td><td></td><td>Vendor payments (FY2024–FY2025 + FYTD)</td><td>2026-11-16</td><td>—</td><td>Sent — awaiting response</td><td class="num">—</td><td>—</td></tr>
+<tr id="rrg-165"><td>RRG-165</td><td>Lane County</td><td><a href="requests/lane-county-26-1083.html">26-1083</a></td><td>Contract documents</td><td>2026-11-19</td><td>2026-11-20</td><td>Portal redirect — county entered 11-19 send as #26-1083 — intake channel-switch per 26-1032/26-104</td><td class="num">—</td><td>pending</td></tr>
 </table>
 
-<p class="note">Both 2026-11-02 denials invoked the requester's "plan and
-ability to distribute the information" under the <em>In Defense of
-Animals v. OHSU</em> discretionary standard — the publication record
-itself is part of this study's data. Correspondence metadata (dates,
-fee breakdowns) is maintained in the study's internal request ledger;
-this table is the public summary.</p>
+<p class="note">Statuses are abbreviated; full correspondence metadata
+(dates, fee breakdowns, petition texts) is maintained in the study's
+request ledger. Identical wave-2 state requests use one canonical ask
+(vendor payments FY2024–FY2025 + FYTD); federal requests use the FOIA
+variant. Fees paid remain $0 — every fee event to date has been met
+with waiver pressure or narrowing rather than payment.</p>
 </body>
 </html>

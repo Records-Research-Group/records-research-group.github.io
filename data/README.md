@@ -35,11 +35,20 @@ in the accompanying
 
 ## `accessibility_scoreboard.csv`
 
-Per-request ledger for the Lane County records accessibility study:
-requests filed, first responses, statuses, fees quoted vs paid, and
-fee-waiver outcomes (ORS 192.324(5)). Rendered at
-[`../scoreboard.html`](../scoreboard.html). Updated as correspondence
-arrives.
+Per-request ledger for the Oregon records accessibility study: 163
+requests filed Oct–Nov 2026 across ~130 bodies (state, county,
+municipal, federal), with first responses, statuses, fees quoted vs
+paid, fee-waiver outcomes (ORS 192.324(5)), and petition filings.
+Rendered at [`../scoreboard.html`](../scoreboard.html) with stable
+per-row anchors (`#rrg-NN`). Regenerated from the study ledger by
+[`../_build_scoreboard.py`](../_build_scoreboard.py); updated as
+correspondence arrives.
+
+## `findings.csv`
+
+Machine-readable index of the published findings (F1–F8): title,
+bodies covered, witness rows in the scoreboard, status, and page
+anchor. Rendered at [`../findings/`](../findings/).
 
 ## `or_muni_fac_overlay.csv`
 

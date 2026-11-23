@@ -5,7 +5,31 @@
 <link>https://records-research-group.github.io/</link>
 <description>Public-records accessibility research — Oregon administrative and financial records. Findings, derived datasets, and the request/response record itself, free at the point of access (CC0).</description>
 <language>en-us</language>
-<lastBuildDate>Mon, 16 Nov 2026 20:30:00 -0800</lastBuildDate>
+<lastBuildDate>Mon, 23 Nov 2026 18:00:00 -0800</lastBuildDate>
+
+<item>
+<title>Findings published: eight documented patterns from a 163-request sweep</title>
+<link>https://records-research-group.github.io/findings/</link>
+<guid>https://records-research-group.github.io/findings/</guid>
+<pubDate>Mon, 23 Nov 2026 18:00:00 -0800</pubDate>
+<description>Eight findings pairing stated records obligations with observed desk behavior: transparency-dead-zone deflection, desk-level and narrowing-immune fee treatment, email-channel refusals, 53 unacknowledged requests, 18 filed petitions with lapsed order clocks, and a custodianship vacuum for a fatal low-head dam. Each carries witnesses in the scoreboard and explicit non-claims.</description>
+</item>
+
+<item>
+<title>Scoreboard regenerated: 163 requests across 130 bodies</title>
+<link>https://records-research-group.github.io/scoreboard.html</link>
+<guid>https://records-research-group.github.io/scoreboard.html#2026-11-23</guid>
+<pubDate>Mon, 23 Nov 2026 18:00:00 -0800</pubDate>
+<description>The request ledger now covers the full Oct-Nov sweep: 19 productions, 9 fee estimates totaling $4,851.61 ($0 paid), 23 waiver requests (2 granted, 5 denied), 53 unacknowledged requests, and 18 petitions for review (L1-L18). Per-row anchors for citation.</description>
+</item>
+
+<item>
+<title>Five new request pages: ESS contracts, millrace, Eugene register</title>
+<link>https://records-research-group.github.io/requests/</link>
+<guid>https://records-research-group.github.io/requests/#2026-11-23</guid>
+<pubDate>Mon, 23 Nov 2026 18:00:00 -0800</pubDate>
+<description>26-1032 (ESS contract file, free, no rate schedules possessed), 26-1055 (procurement file), 26-1083 (Exhibit C revision history - resolved), PRR-2026-926 (73,464-row register emailed free), PRR-2026-948 (city dam records, in flight). Four existing pages extended with petition and production events.</description>
+</item>
 
 <item>
 <title>Lane County jail medical contract #57233 (Wellpath LLC): $34.1M cumulative authority through FY2027</title>
