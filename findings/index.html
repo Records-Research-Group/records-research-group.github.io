@@ -61,8 +61,8 @@ index: <a href="../data/findings.csv">findings.csv</a>.</p>
 <tr><td>F4</td><td><a href="#f4">Desk-level fee treatment, incl. narrowing-immunity</a></td><td>8+</td><td>Documented</td></tr>
 <tr><td>F5</td><td><a href="#f5">Email channel accepted in law, refused at desks</a></td><td>4 refusals + relay variants</td><td>Documented</td></tr>
 <tr><td>F6</td><td><a href="#f6">Delivery mechanics as friction</a></td><td>1 primary + supporting</td><td>Documented (weakest)</td></tr>
-<tr><td>F7</td><td><a href="#f7">Mass nonresponse; petition layer silent</a></td><td>50 labeled; 18 petitions</td><td>Documented; clocks open</td></tr>
-<tr><td>F8</td><td><a href="#f8">Custodianship seams — responsibility vacuum</a></td><td>3-desk vacuum + rollup pattern</td><td>Documented</td></tr>
+<tr><td>F7</td><td><a href="#f7">Mass nonresponse; petition layer silent</a></td><td>51 labeled; 18 petition IDs</td><td>Documented; clocks open</td></tr>
+<tr><td>F8</td><td><a href="#f8">Custodianship seams — custody not yet located</a></td><td>2 disclaimers + City pending; rollup pattern</td><td>Documented</td></tr>
 </table>
 
 <section class="f" id="f1">
@@ -162,17 +162,18 @@ the published layer can substitute for the requested records.</dd>
 payment-level export OWRD produced under ORS 192 for the same period.
 The divergence resolves as:
 <ul>
-<li><b>+$5.29M portal-side only:</b> 22 payees appearing on the portal
-but not in the export — all other state agencies (DAS $2.72M, DOJ
-$2.09M, etc.). Inter-agency transfers are counted as expenditure on
-the portal but excluded from a vendor-payments export.</li>
+<li><b>−$5.29M portal-side only:</b> 22 payees appearing on the portal
+but not in the export — all reported as other state agencies (DAS
+$2.72M, DOJ $2.09M, etc.), consistent with inter-agency transfers
+counted as portal expenditure but excluded from a vendor-payments
+export.</li>
 <li><b>+$4.12M production-side only:</b> 246 payees in the export but
-absent from the portal — fiscal-boundary obligations tagged FY2025 by
-appropriation year but dated July 2025+ by transaction date (the
-portal books by transaction date), plus the F2 person-payee class.</li>
+absent from the portal — reported as fiscal-boundary obligations and
+the F2 person-payee class.</li>
 <li><b>+$2.49M same-vendor year disagreement:</b> 131 shared vendors
-where both sides report the vendor but assign the same payments to
-different fiscal years.</li>
+where the two surfaces report different FY2025 totals — consistent
+with appropriation-year vs. transaction-date bucketing, not yet
+verified at transaction level.</li>
 </ul>
 The competing explanation is real and is itself the finding: the two
 totals measure spending under different definitions (all disbursements
@@ -181,8 +182,11 @@ bucketing). The discrepancy alone does not establish that either total
 is wrong.</dd>
 <dt>Witnesses</dt>
 <dd><a href="../scoreboard.html#rrg-64">RRG-64</a> (OWRD production)
-vs. portal API aggregates; a per-vendor difference table is maintained
-in the study ledger.</dd>
+vs. portal API aggregates. Verification limitation: the source totals
+are reproduced (the two aggregate figures and the rounded components),
+but the per-vendor difference table and input extracts are maintained
+in the study ledger and not yet published — component assignments and
+the fiscal-year explanations are researcher-reported.</dd>
 <dt>What this does not establish</dt>
 <dd>That either figure is incorrect — the finding is that the two
 public surfaces are not reconcilable by a member of the public without
@@ -284,8 +288,8 @@ submitted through GovQA"). All four refusals are under petition
 <li>The Criminal Justice Commission replied (2026-11-16) that a
 reference number exists only via the oregon.gov web form; staff then
 pasted our email into that form themselves, generating auto-confirmation
-Record ID 38629 — the request was valid all along; the portal was for
-the workflow, not the record.</li>
+Record ID 38629 — the email was sufficient to docket the request; the
+portal was for the workflow, not the record.</li>
 <li>Lane County and City of Eugene both re-enter emailed requests into
 their own portals (NextRequest tickets 26-1032/26-1042/26-1055/26-1083;
 JustFOIA PRR-2026-896/926/948) — processing the request while
@@ -342,7 +346,7 @@ kept for completeness.</dd>
 <h2>F7 — Mass nonresponse; the petition layer is itself silent</h2>
 <dl>
 <dt>Claim</dt>
-<dd>49 of the 108 identical wave-2 state requests (45%) were never
+<dd>50 of the 108 identical wave-2 state request rows (46%) were never
 acknowledged at all — past the statutory acknowledgment window — and
 the escalation venue the statute provides has so far produced zero
 orders, including on petitions whose own 7-day order clocks have
@@ -352,22 +356,23 @@ lapsed.</dd>
 192.415/192.418: on petition, the DA (county) or Attorney General
 (state) shall issue an order within seven days.</dd>
 <dt>Observed behavior</dt>
-<dd>53 ledger rows carry a nonresponse tag; excluding two
-delivery-unverified sends and one bounced re-send, <b>50 rows</b> are
-labeled nonresponsive as of 2026-11-23 — 49 of them among the 108
-canonical state requests (45%), plus one sheriff in-custody-deaths
-request. Eighteen petitions for review have been logged as filed
-(L1–L18): channel refusals (L1, L5, L6, L7-DPSST), constructive denial
-via narrowing-immune fees (L3, L7-975), a fee-waiver denial (L4), a
-batch of categorical nonresponses (L8–L17), and the sheriff request
-(L18). Filing dates are ledger-logged from send records; the petition
-texts are held as drafts. The earliest petitions' statutory 7-day
-order clocks have lapsed; as of 2026-11-23 no order has been received
-on any petition — a narrower observation than "the oversight layer did
-nothing."</dd>
+<dd><b>51 rows</b> are labeled nonresponsive as of 2026-11-23 — 50 of
+the 108 canonical state request rows (46%; desk-level 49 of 106 after
+deduplicating two agencies the enumeration sent twice), plus one
+sheriff in-custody-deaths request. Eighteen petition identifiers are
+logged as filed (L1–L18, 19 filings — L7 denotes two distinct
+petitions: L7-DPSST at the AG and L7-975 at the Lane DA): channel
+refusals (L1, L5, L6, L7-DPSST), constructive denial via
+narrowing-immune fees (L3, L7-975), a fee-waiver denial (L4), a batch
+of categorical nonresponses (L8–L17), and the sheriff request (L18).
+Filing dates are ledger-logged from send records; transmission
+receipts and any orders are the authoritative evidence. The earliest
+petitions' statutory 7-day order clocks have lapsed; as of 2026-11-23
+no order has been received on any petition — a narrower observation
+than "the oversight layer did nothing."</dd>
 <dt>Witnesses</dt>
-<dd>Scoreboard rows carrying "Nonresponse past ORS 192.324 ack window"
-status (50 rows); petition filings noted on
+<dd>Scoreboard rows carrying a nonresponsive status (51 rows);
+petition filings noted on
 <a href="../scoreboard.html#rrg-10">RRG-10</a>,
 <a href="../scoreboard.html#rrg-21">RRG-21</a>,
 <a href="../scoreboard.html#rrg-93">RRG-93</a>, and the L8–L17 batch
@@ -385,14 +390,13 @@ a scorecard datum.</dd>
 </section>
 
 <section class="f" id="f8">
-<h2>F8 — Custodianship seams: where responsibility is nobody's</h2>
+<h2>F8 — Custodianship seams: custody not yet located</h2>
 <dl>
 <dt>Claim</dt>
-<dd>The hardest failures are not refusals but vacuums: subjects where a
-physical or administrative reality exists and no entity is obligated to
-hold records for it — so every desk's "no responsive records" is
-individually true while no custodian has been identified among the
-desks asked.</dd>
+<dd>The responses received so far have not identified a custodian for
+the requested Millrace records: OWRD reports no responsive records,
+EWEB disclaims ownership and records for the specified items, and the
+City's response remains pending.</dd>
 <dt>Stated obligation</dt>
 <dd>ORS 192 obligates custodians of existing records; it cannot
 obligate a custodian for records nobody was charged with keeping.</dd>
@@ -463,21 +467,26 @@ threads, not controls. <b>Federal rows run under FOIA</b> (5 U.S.C.
 §552, 20-business-day determination, federal FY ending September 30) —
 a different statute and clock; they are published in the same ledger
 but are not part of the ORS rates.</p>
-<p><b>What the rates mean.</b> Figures like "49 of 108 canonical
-requests unacknowledged (45%)" describe <em>this corpus</em> — one requester, identical asks, a
+<p><b>What the rates mean.</b> Figures like "50 of 108 canonical
+request rows unacknowledged (46%; 49 of 106 distinct desks)" describe
+<em>this corpus</em> — one requester, identical asks, a
 defined denominator — not the rate at which all requesters or all
 requests are ignored. The instrument measures desk behavior under an
 email-channel requester posture; portal-first requesters may see
 different treatment, and a share of nonresponses will trace to address
 rot, spam filtering, or staffing rather than posture. Where a finding
-covers a small number of bodies (F1: three verified; F2: two
-replicating, one counter-example) the count is stated with it.</p>
+covers a small number of bodies (F1: two verified + one ledger-logged;
+F2: two replicating, one counter-example) the count is stated with it.
+Two agencies received the canonical ask twice under enumeration
+spelling variants (OGEC rows 25/50, ODHS rows 24/41) — desk-level
+figures deduplicate them.</p>
 
 <h2 id="subject-response-rights">Subject response rights</h2>
 <p>Every body named in a finding was contacted on the underlying request
 thread — several findings document the reply itself changing the
-outcome (a produced export after a documented rebuttal; a same-day
-answer that resolved a document-set question). Beyond that record:
+outcome (a produced export after a documented rebuttal; a
+next-business-day answer that resolved a document-set question).
+Beyond that record:
 any body named in a finding may submit a response at any time via the
 contact address below; substantive responses are appended to the
 finding verbatim and dated. Factual corrections receive the dated

@@ -114,9 +114,15 @@ def status_of(row, notes):
     n = notes
     st = row["status"]
     tag = last_outcome(n)
-    resends = {"32": "66", "47": "65", "25": "20"}  # bounced row re-sent; not an independent desk
+    resends = {"32": "66", "47": "65"}  # bounced send re-sent under a new row; not an independent desk
     if row["id"] in resends:
         return f"Bounced — re-sent as RRG-{resends[row['id']]}", tag
+    dup_desk = {"50": "25", "41": "24"}  # same agency enumerated under two names; same canonical send
+    if row["id"] in dup_desk:
+        base = f"Duplicate canonical send — same desk as RRG-{dup_desk[row['id']]}"
+        if "nonresponse-finding" in n:
+            return base + " — nonresponsive per that row", tag
+        return base, tag
     if "nonresponse-finding" in n:
         if "delivery unverified" in n:
             return "No response on file (send-desk delivery unverified)", tag
@@ -167,7 +173,7 @@ for r in rows:
     if fr: first_resp_n += 1
     status, tag = status_of(r, notes)
     if produced := re.search(r"\bProduced\b", status): produced_n += 1
-    if "Nonresponse past" in status: nonresp_n += 1
+    if "Nonresponse past" in status or "nonresponsive per" in status: nonresp_n += 1
     if "Bounced" in status: bounce_n += 1
     fee_amt = fee(notes)
     if fee_amt:
@@ -216,12 +222,13 @@ for r in out:
 
 # resend pairs: an earlier bounced row is not an independent desk
 sent_n = sum(1 for r in rows if (r.get("sent") or ""))
-ag_n = len({r["agency"] for r in rows if (r.get("sent") or "") and r["id"] not in {"32","47","25"}})
-canon_n = sum(1 for r in rows if r["template"] == "sweep_vendor_payments" and (r.get("sent") or ""))
-canon_nr = sum(1 for r in rows if r["template"] == "sweep_vendor_payments"
-               and r["id"] not in {"32","47","25"}
-               and "nonresponse-finding" in (r.get("notes") or "")
-               and "delivery unverified" not in r["notes"])
+ag_n = len({r["agency"] for r in rows if (r.get("sent") or "") and r["id"] not in {"32","47","50","41","25"}}) + 1
+canon_rows = [r for r in rows if r["template"] == "sweep_vendor_payments" and (r.get("sent") or "")]
+canon_n = len(canon_rows)
+canon_desks = canon_n - 2  # two agencies sent the canonical ask twice (OGEC 25/50, ODHS 24/41)
+canon_nr = sum(1 for r in canon_rows
+               if "nonresponse-finding" in (r.get("notes") or "") and "delivery unverified" not in r["notes"])
+canon_nr_desks = canon_nr - 1  # the OGEC duplicate pair is one desk
 html = f'''<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -258,16 +265,16 @@ accessibility study</a>.</p>
 <tr><td>Requests filed (Oct–Nov 2026 waves)</td><td class="num">{sent_n}</td></tr>
 <tr><td>Distinct agencies (bounce re-sends deduplicated)</td><td class="num">{ag_n}</td></tr>
 <tr><td>Requests with a recorded first response (excl. bounces)</td><td class="num">{first_resp_n} of {sent_n}</td></tr>
-<tr><td>Canonical state sweep rows (identical vendor-payments ask)</td><td class="num">{canon_n}</td></tr>
-<tr><td>Record sets produced</td><td class="num">{produced_n}</td></tr>
-<tr><td>Fee estimates issued</td><td class="num">{fee_n} requests — ${fee_total:,.2f} total quoted</td></tr>
+<tr><td>Canonical state sweep rows (identical vendor-payments ask)</td><td class="num">{canon_n} rows / {canon_desks} distinct desks</td></tr>
+<tr><td>Rows produced-status</td><td class="num">{produced_n} (19 record sets + 1 completeness certification)</td></tr>
+<tr><td>Requests with recorded numeric estimates</td><td class="num">{fee_n} — ${fee_total:,.2f} initial quotes (RRG-13 later revised to $207.90 → $5,059.51 latest view)</td></tr>
 <tr><td>Fees paid to date</td><td class="num">$0</td></tr>
-<tr><td>Fee waivers requested (ORS 192.324(5))</td><td class="num">{waivers['req']}</td></tr>
+<tr><td>Fee waivers/reductions requested (ORS 192.324(5) + federal FOIA rows)</td><td class="num">{waivers['req']}</td></tr>
 <tr><td>&nbsp;&nbsp;— granted (incl. federal FOIA)</td><td class="num">{waivers['granted']}</td></tr>
 <tr><td>&nbsp;&nbsp;— denied</td><td class="num">{waivers['denied']}</td></tr>
-<tr><td>Nonresponses past ORS ack window — logged or petitioned</td><td class="num">{nonresp_n} ({canon_nr} of {canon_n} canonical rows = {canon_nr/canon_n:.1%})</td></tr>
+<tr><td>Nonresponses past ORS ack window — logged or petitioned</td><td class="num">{nonresp_n} rows ({canon_nr} of {canon_n} canonical rows = {canon_nr/canon_n:.1%}; desk-level {canon_nr_desks} of {canon_desks} = {canon_nr_desks/canon_desks:.1%})</td></tr>
 <tr><td>Petitions for review filed (ORS 192.415 / AG)</td><td class="num">{len(petitions)}</td></tr>
-<tr><td>Bounced addresses (dead directory entries)</td><td class="num">{bounce_n}</td></tr>
+<tr><td>Bounced sends (incl. rows later re-sent)</td><td class="num">{bounce_n}</td></tr>
 </table>
 
 <h2>How to read statuses</h2>
