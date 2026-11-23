@@ -273,14 +273,14 @@ accessibility study</a>.</p>
 <tr><td>&nbsp;&nbsp;— granted (incl. federal FOIA)</td><td class="num">{waivers['granted']}</td></tr>
 <tr><td>&nbsp;&nbsp;— denied</td><td class="num">{waivers['denied']}</td></tr>
 <tr><td>Nonresponses past ORS ack window — logged or petitioned</td><td class="num">{nonresp_n} rows ({canon_nr} of {canon_n} canonical rows = {canon_nr/canon_n:.1%}; desk-level {canon_nr_desks} of {canon_desks} = {canon_nr_desks/canon_desks:.1%})</td></tr>
-<tr><td>Petitions for review filed (ORS 192.415 / AG)</td><td class="num">{len(petitions)}</td></tr>
+<tr><td>Petitions for review (ORS 192.415 / AG)</td><td class="num">{len(petitions)} identifiers / 19 logged filings</td></tr>
 <tr><td>Bounced sends (incl. rows later re-sent)</td><td class="num">{bounce_n}</td></tr>
 </table>
 
 <h2>How to read statuses</h2>
 <table class="stats">
 <tr><th>Status label</th><th>Meaning</th></tr>
-<tr><td>Produced / Completed</td><td>Records delivered (any format); resolved</td></tr>
+<tr><td>Produced / Completed</td><td>Records delivered (any format); row may remain open on follow-ups</td></tr>
 <tr><td>Fee estimate issued</td><td>Priced, unpaid — open while the pay-or-close clock runs</td></tr>
 <tr><td>Portal redirect / Channel-switch letter</td><td>Desk demands or steers to a portal channel; request posture preserved</td></tr>
 <tr><td>No responsive records (per desk)</td><td>Desk reports a null set — unfalsifiable from outside, logged as stated</td></tr>

@@ -57,7 +57,7 @@ index: <a href="../data/findings.csv">findings.csv</a>.</p>
 <tr><th>#</th><th>Finding</th><th>Bodies</th><th>Status</th></tr>
 <tr><td>F1</td><td><a href="#f1">Transparency-dead-zone deflection</a></td><td>2 verified + 1 logged</td><td>Documented</td></tr>
 <tr><td>F2</td><td><a href="#f2">Person-payee exclusion from state transparency portal</a></td><td>2 comparisons + variants</td><td>Reported — mechanism open</td></tr>
-<tr><td>F3</td><td><a href="#f3">Portal↔ledger divergence ($1.32M)</a></td><td>1 verified</td><td>Documented</td></tr>
+<tr><td>F3</td><td><a href="#f3">Portal↔ledger divergence ($1.32M)</a></td><td>1</td><td>Arithmetic verified; components researcher-reported</td></tr>
 <tr><td>F4</td><td><a href="#f4">Desk-level fee treatment, incl. narrowing-immunity</a></td><td>8+</td><td>Documented</td></tr>
 <tr><td>F5</td><td><a href="#f5">Email channel accepted in law, refused at desks</a></td><td>4 refusals + relay variants</td><td>Documented</td></tr>
 <tr><td>F6</td><td><a href="#f6">Delivery mechanics as friction</a></td><td>1 primary + supporting</td><td>Documented (weakest)</td></tr>
@@ -175,11 +175,10 @@ where the two surfaces report different FY2025 totals — consistent
 with appropriation-year vs. transaction-date bucketing, not yet
 verified at transaction level.</li>
 </ul>
-The competing explanation is real and is itself the finding: the two
-totals measure spending under different definitions (all disbursements
-vs. external vendor payments; appropriation-year vs. transaction-date
-bucketing). The discrepancy alone does not establish that either total
-is wrong.</dd>
+Differences in coverage and fiscal-year treatment are competing
+explanations consistent with the observed totals; their contribution
+has not yet been verified at transaction level. The discrepancy alone
+does not establish that either total is wrong.</dd>
 <dt>Witnesses</dt>
 <dd><a href="../scoreboard.html#rrg-64">RRG-64</a> (OWRD production)
 vs. portal API aggregates. Verification limitation: the source totals
@@ -193,7 +192,8 @@ public surfaces are not reconcilable by a member of the public without
 the detailed export, which is what a records request is for — and
 which the F1-style portal referral would leave undone.</dd>
 <dt>Status</dt>
-<dd>Documented.</dd>
+<dd>Arithmetic verified; component assignments researcher-reported
+pending publication of the reconciliation inputs.</dd>
 </dl>
 </section>
 
@@ -238,10 +238,10 @@ comparison demonstrates fee variance across desks, not like-for-like
 pricing of an identical record.</li>
 <li>Waiver record: 23 waiver/reduction requests across the corpus,
 including federal FOIA rows; 2 granted — one under ORS, one under
-federal FOIA — and 5 denied (denials cited the requester's "plan
-and ability to distribute the information" under the <em>In Defense of
-Animals v. OHSU</em> discretionary standard), remainder pending or
-mooted by free production.</li>
+federal FOIA — and 5 denied (the denial letters in hand cite the
+requester's "plan and ability to distribute the information" under the
+<em>In Defense of Animals v. OHSU</em> discretionary standard),
+remainder pending or mooted by free production.</li>
 </ul></dd>
 <dt>Witnesses</dt>
 <dd><a href="../scoreboard.html#rrg-10">RRG-10</a> /
@@ -323,8 +323,8 @@ image-only PDFs, link-only portal notices — can reduce the record's
 immediate usability or add retrieval steps.</dd>
 <dt>Observed behavior</dt>
 <dd>Eugene's PRR-2026-896 payroll production (RRG-13) arrived as a
-scanned image-only PDF — no text layer — after the desk declined the
-requested CSV; the completion notice contained a link rather than the
+scanned image-only PDF — no text layer — where a usable export had
+been requested; the completion notice contained a link rather than the
 records themselves (the documents were publicly retrievable at the
 posted link — no account was required). A GovQA auto-acknowledgment at
 DOC (RRG-49) shows the same channel mechanics at intake.</dd>
@@ -398,8 +398,9 @@ the requested Millrace records: OWRD reports no responsive records,
 EWEB disclaims ownership and records for the specified items, and the
 City's response remains pending.</dd>
 <dt>Stated obligation</dt>
-<dd>ORS 192 obligates custodians of existing records; it cannot
-obligate a custodian for records nobody was charged with keeping.</dd>
+<dd>ORS 192 obligates custodians of existing records; whether any
+entity bears recordkeeping duties for this structure is not resolved
+by the responses to date.</dd>
 <dt>Observed behavior</dt>
 <dd>The Millrace diversion dam — a functioning low-head structure on
 Eugene's millrace — was asked about at three desks. OWRD's dam-safety
@@ -436,8 +437,8 @@ rollup no-records rows e.g.
 (ESS set — resolved numbering gap).</dd>
 <dt>What this does not establish</dt>
 <dd>That records were destroyed or that any desk's absence claim is
-false — a "no responsive records" answer is largely unfalsifiable from
-outside, though contradictory records could refute it. Nor does it
+false — a "no responsive records" answer is not independently tested
+here, though contradictory records could refute it. Nor does it
 establish that no entity holds recordkeeping obligations — custody may
 exist at a desk not yet asked; the City response is pending.</dd>
 <dt>Status</dt>
@@ -454,19 +455,20 @@ the Secretary of State's Blue Book <em>State Agencies, Boards and
 Commissions</em> list plus the Governor's Board Book: 143 entries after
 folding subunits to parents, including zero-budget boards ("no
 disbursements" is itself a response class); excluded: judiciary,
-legislative bodies, and staff-less advisory task forces. Wave 3 filed a
-FOIA variant at 25 federal bodies with Oregon presence (judiciary,
-congressional offices, USPS, and DOD-no-installation excluded).</p>
+legislative bodies, and staff-less advisory task forces. Wave 3 sent a
+FOIA variant to federal bodies with Oregon presence — 16 canonical
+vendor-FOIA rows appear in the ledger (judiciary, congressional
+offices, USPS, and DOD-no-installation excluded from selection).</p>
 <p><b>What is comparable.</b> Wave-2 and wave-3 rows carry one canonical
 ask — payment-level vendor records, FY2024 + FY2025 + FYTD, fee waiver
-cited — so their outcomes are directly comparable: same request, same
-statute family, different desks. Wave-1 rows are heterogeneous asks and
-should not be pooled with the canonical rows when comparing outcomes;
-fee and response figures from wave 1 are illustrative of their own
-threads, not controls. <b>Federal rows run under FOIA</b> (5 U.S.C.
-§552, 20-business-day determination, federal FY ending September 30) —
-a different statute and clock; they are published in the same ledger
-but are not part of the ORS rates.</p>
+cited — and outcomes are directly comparable <em>within each legal
+regime</em>: same request, different desks. Wave-1 rows are
+heterogeneous asks and should not be pooled with the canonical rows
+when comparing outcomes; fee and response figures from wave 1 are
+illustrative of their own threads, not controls. <b>Federal rows run
+under FOIA</b> (5 U.S.C. §552, 20-business-day determination, federal
+FY ending September 30) — a different statute and clock; they are
+published in the same ledger but are not part of the ORS rates.</p>
 <p><b>What the rates mean.</b> Figures like "50 of 108 canonical
 request rows unacknowledged (46%; 49 of 106 distinct desks)" describe
 <em>this corpus</em> — one requester, identical asks, a
@@ -494,7 +496,9 @@ treatment described on the <a href="../about.html">about page</a>.</p>
 
 <h2>Method note</h2>
 <p>Every datum above is traceable to the published
-<a href="../scoreboard.html">request ledger</a> or a per-request page;
+<a href="../scoreboard.html">request ledger</a> or a per-request page,
+except F2/F3's analytical inputs (diff dataset, reconciliation table),
+which are marked researcher-reported pending publication;
 correspondence metadata (dates, quoted text) is maintained in the
 internal evidence archive and summarized on the request pages.
 Statuses are a dated snapshot — the ledger shows each row's state as
